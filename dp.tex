@@ -1,0 +1,140 @@
+\pdfoutput=1
+\documentclass[a4paper,12pt,titlepage, twoside]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{algorithm,algpseudocode}
+\usepackage[title,titletoc]{appendix}
+\newcommand{\Author}{Jan Bouček}
+\newcommand{\Title}{Model Predictive Control of Unmanned Helicopter with Obstacle Avoidance}
+\newcommand{\Acronym}{Acronym}
+\newcommand{\WorkPackage}{WorkPackage}
+\newcommand{\DocName}{Bachelor thesis}
+\newcommand{\Subject}{\WorkPackage - \DocName}
+\newcommand{\Keywords}{mobile robotics}
+\newcommand{\Date}{11/07/2011}
+\newcommand{\DOCVersion}{0.1}
+\newcommand{\jed}[1]{\ensuremath{~\mathrm{#1}}} %příkaz pro sazbu fyzikálních jednotek
+
+\def\clinks{false}
+
+\input{src/doc_head}
+
+\renewcommand{\lstlistlistingname}{List of Algorithms}
+\renewcommand{\lstlistingname}{Listing}
+\definecolor{background_color}{rgb}{1.0, 1.0, 0.85}
+\definecolor{comment_color}{rgb}{0.0, 0.5, 0.0}
+\definecolor{keyword_color}{rgb}{0.0, 0.0, 1.0}
+\definecolor{string_color}{rgb}{0.8, 0.0, 0.0}
+\lstset{language=ksh}
+\lstset{backgroundcolor=\color{background_color}}
+\lstset{frameround=tttt}
+\lstset{columns=fullflexible}
+\lstset{keywordstyle=\color{keyword_color}\bfseries}
+\lstset{commentstyle=\color{comment_color}}
+\lstset{stringstyle=\color{string_color}}
+\lstset{basicstyle=\ttfamily}
+\lstset{showstringspaces=false}
+\lstset{frame=single}
+\lstset{keepspaces=true}
+\lstset{tabsize=4}
+\lstset{breaklines=true}
+\lstset{captionpos=b}
+
+\begin{document}
+\DocBegin
+
+%% dát pryč z elektronické verze!!
+%%\setlength{\oddsidemargin}{+0.5cm} 
+%%\setlength{\evensidemargin}{-0.5cm}
+%%
+
+% Titulní stránka
+\input{src/title}
+\pagestyle{empty}
+\cleardoublepage
+
+%% dát pryč z elektronické verze!!!
+%%\input{src/prohlaseni}
+%%\cleardoublepage
+%%
+
+%% dát pryč před tiskem!!!
+%~\vfill
+%\includegraphics[width=1\textwidth]{prohlaseni.jpg}
+%\cleardoublepage
+%%
+
+%% dát pryč před tiskem!!!
+%\includepdf[pages={1}]{zadani_cesky.pdf}
+%\cleardoublepage
+%\includepdf[pages={1}]{zadani_anglicky.pdf}
+%\cleardoublepage
+%%
+
+% Podekování
+\input{src/podekovani}
+\cleardoublepage
+
+% Stránka s abstrakty
+\input{src/abstract}
+\input{src/abstrakt}
+\cleardoublepage
+
+\pagestyle{fancy}
+\pagenumbering{roman}
+\cfoot{\thepage}
+
+% Obsah
+\tableofcontents
+\cleardoublepage
+
+% Seznam obrázků
+\listoffigures
+\cleardoublepage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\cfoot{}
+\rfoot{\thepage$/$\pageref{LastPage}}
+\setlength{\parskip}{0.35cm}
+
+\lhead{\emph{\leftmark}}
+\rhead{}
+
+% Úvod
+\input{src/introduction}
+\clearpage
+
+% State of the art
+\input{src/related_work}
+\clearpage
+
+% Q
+\input{src/system}
+\clearpage
+
+% Q
+\input{src/quad_programming}
+\clearpage
+
+% Závěr
+\input{src/conclusion}
+\cleardoublepage
+
+% Seznam literatury se nachází v dp.bib
+\bibliography{dp}{}
+\cleardoublepage
+\bibliographystyle{plain}
+\clearpage
+
+% Apendixy, schemata, seznam zkratek, atp...
+\appendices
+\lhead{\emph{APPENDIX \leftmark}} 
+\input{src/obsah_CD}
+\cleardoublepage
+
+\input{src/list_of_abbreviations}
+\cleardoublepage
+
+\end{document}
