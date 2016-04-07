@@ -1,0 +1,12 @@
+Struktura:
+
+UAV
+
+
+MPC unconstrained
+
+
+MPC constrained
+
+Poznámky:
+	- bmatrix nefunguje
