@@ -1,0 +1,112 @@
+\documentclass{article}
+
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{epstopdf}
+\begin{document}
+
+Mam takovy pocit, ze kdyz jsi rozsiroval ten system pridavanim toho odhadu chyby z kalmana, vnes sis tam zpozdeni. Tady je muj postup myslenek a nastinene reseni, jak to popsat pomoci jenom 4 stavu. 
+\section{tvuj jednoduchy system}
+
+\begin{equation}
+\begin{split}
+\mathbf{A}_{x, y} = \begin{bmatrix}
+1 & 0.0114 & 0\\
+0 & 1 & 0.0114\\
+0 & 0 & P_1
+\end{bmatrix}, \mathbf{B}_{x, y} = \begin{bmatrix}
+0\\
+0\\
+P_0
+\end{bmatrix},
+\end{split}
+\label{eq:attitude_LTI_big_identified}
+\end{equation}
+
+To znamena, ze stavova rovnice je 
+
+\begin{equation}
+x_{3, t+1} = P_1 x_{3, t}+P_0u_t
+\end{equation}
+kde $x_{3}$ je zrychleni. Kdybych modeloval tu poruchu, tak se budu snazit dostat rovnici
+
+\begin{equation}
+\label{eq:aaa}
+x_{3, t+1} = P_1 x_{3, t}+P_0u_t + e
+\end{equation}
+
+kde za $e$ povazuju nejakou 'konstantni' odhadnutou poruchu.
+
+\section{tvuj rozsireny system}
+\begin{equation}
+\begin{split}
+\mathbf{A}_{x, y} = \begin{bmatrix}
+1 & 0.0114 & 0 & 0 & 0 \\
+0 & 1 & 0.0114 & 0 & 0\\
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & P_1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{bmatrix}, \mathbf{B}_{x, y} = \begin{bmatrix}
+0\\
+0\\
+0\\
+P_0\\
+0
+\end{bmatrix},
+\end{split}
+\label{eq:attitude_LTI_big_identified}
+\end{equation}
+
+Kdybych to mel popsat stavovou rovnici, dostanu
+\begin{equation}
+\begin{split}
+x_{3, t+1} = x_{4, t} + x_{5, t} \\
+x_{4, t+1} = P_1 x_{4, t}+P_0 u_t \\
+x_{5, t+1} = x_{5, t} = porucha \;\;e\\
+Po \;\;substituci \;\;dostanu \\
+x_{3, t+1} = P_1 x_{4, t-1}+P_0 u_{t-1} + x_{5, t-1}
+\end{split}
+\end{equation}
+Tim chci ukazat, ze se do toho stavu promitnou vstupy z predpredchoziho kroku a ne z predchoziho jako v \ref{eq:aaa}. Na zpozdeni poruchy snad nezalezi, jestli se meni pomalu. Nastesti tohle zpozdeni snad nema uplne moc velky vyznam v realnem rizeni
+
+\section{Muj navrhovany system}
+
+Nastavit poruchu na stav $x_4 = e$ a pouzit tyhle matice
+
+\begin{equation}
+\begin{split}
+\mathbf{A}_{x, y} = \begin{bmatrix}
+1 & 0.0114 & 0 & 0\\
+0 & 1 & 0.0114 & 0\\
+0 & 0 & P_1 & 1\\
+0 & 0 & 0 & 1
+\end{bmatrix}, \mathbf{B}_{x, y} = \begin{bmatrix}
+0\\
+0\\
+P_0\\
+0
+\end{bmatrix},
+\end{split}
+\end{equation}
+
+Tim bys mohl dostat tyhle stavove rovnice:
+
+\begin{equation}
+\begin{split}
+x_{3, t+1} = P_1 x_{3, t} + x_{4, t} +P_0 u_t \\
+x_{4, t+1} = x_{4, t} = porucha \;\;e\\
+Po \;\;substituci \;\;dostanu \\
+x_{3, t+1} = P_1 x_{3, t}+P_0 u_{t} + x_{4, t-1}
+\end{split}
+\end{equation}
+
+Timhle jsem se zbavil jednoho stavu a toho jedno krokoveho zpozdeni. Zpozdeni odhadu chyby mi zustalo, ale to by snad nemuselo tolik vadit. 
+
+Snad to dava smysl, mozna jsem neco prehlidnul a je to cely kravina :D
+
+
+\end{document}
