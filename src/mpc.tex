@@ -7,9 +7,14 @@
 \usepackage{graphicx}
 \usepackage{grffile}
 \usepackage{epstopdf}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\uvec}{\textbf{\underline{u}}}
 \begin{document}
 
-
+-- umi se vyhybat pohybujicim se objektum
+-- 2 positions in convex space -> all trajectory
+-- změřit poloměr helikoptéry
+-- algoritmus setpointu
 
 \section{Model predictive control unconstrained}
 
@@ -98,7 +103,7 @@ where $\textbf{u}_{[t]} = (u_{x,[t]}, u_{y,[t]})^T$ is input vector containing e
 By connecting these 2 systems, we get the following state space matrices of the whole system
 \begin{equation}
 \label{eq:state_space}
-\begin{bmatrix}
+\textbf{A} = \begin{bmatrix}
 	\textbf{A}_s & \textbf{0}	\\
 	\textbf{0}   & \textbf{A}_s
 \end{bmatrix}, \textbf{B} = \begin{bmatrix}
@@ -341,7 +346,7 @@ Because the  $\textbf{\^H}$ is positive semi-definite, the quadratic form $\frac
 The inverse of $\textbf{\^H}$ can be done, because $\textbf{\^H}$ is positive-definite, therefore regular. This is guaranteed by the definition of positive-definite property, that it's leading principal minors are all positive \cite{chong2013introduction}. On-board computation is very fast, because matrix $\textbf{\^H}^-1$ does not depend on the system state and is only the function of the constants $k_q$, $k_p$ and the system model. It can be generated on computer and stored as a constant in the UAV's memory. Finding the $\underline{\textbf{u}}^{\star}$ is only matter of creating matrix $\textbf{\^c}$ and matrix multiplication.
 
 
-\subsection{system constraints} \label{ssec:system_constraints}
+\subsection{system constraints} \label{sec:system_constraints}
 One of the greatest advantages of MPC is being able to apply large variety of constraints. As mentioned in \ref{eq:QP_formulation}, the MPC uses linearly constraint quadratic programming for finding the input action prediction. There can be many different constraints required and the solution has to obey all of them. These constraints take form of linear inequalities
 
 \begin{equation}
@@ -377,6 +382,7 @@ where $\textbf{A}_c$ is a matrix of the width 2T and height $m$ - the number of 
 Each line of the matrix $\textbf{A}_c$ together with a particular member of $\textbf{B}_c$ represents one constraint. 
 
 \subsubsection{Input constraints}
+\label{sec:input_constraints}
 In control, one of the biggest problems one must overcome is a system saturation. This means, that the real system is linear only on a certain range of inputs and has limited capapibilities \cite{saturation}. For example motor can spin in a certain maximum speed despite input voltage. Also, if the system receives too high input actions from the controller, it can be destroyed. This can happen for example in PD control, when the difference between real and desired output changes rapidly in time, for example because of a sensory noise.
 A standard  solution for this kind of problem is simply saturating the output of the controller. This is a very simple solution and for many tasks it is enough. However, because the controller doesn't know about this saturation, the system can behave incorrectly.
 The great advantage of MPC is, that the controller can consider these aspects of real system and find an input prediction, that will not violate the constraints and at the same time will achieve the desired output. This is achieved by the constraints. The system saturation thresholds are $u_{min}$ and $u_{max}$
@@ -518,28 +524,204 @@ Let's make an assumption, that the UAV's trajectory is a line created by connect
 
 Easy approach would be to say, that every trajectory is feasible, if any predicted position does not collide with any obstacle. However if the obstacle is just a simple circle in the way, the allowed space is highly non-convex. As mentioned in the section \ref{sec:convexity}, for keeping the quadratic programming convex, the allowed space for UAV has to be convex. This is the greatest disadvantage of using MPC for obstacle avoidance. 
 
-\subsection{Creating Allowed space}
+\subsection{Creating allowed space}
 
 There are many ways of creating a convex space from the knowledge of the obstacles.
-The approach for creating a convex allowed space is restricting any position 'behind' any obstacle. This space would be polytope defined by a set of half planes. These plains are constantly adjusting to the relative positions of the obstacles, which positions are continuously changing due to the change of the UAV position and the noise of the cameras.
+The approach for creating a convex allowed space is restricting any position 'behind' any obstacle. This space would be polytope defined by a set of half planes. These plains are constantly adjusting to the relative positions of the obstacles, which positions are continuously changing due to the change of the UAV position and the noise of the cameras. Let's first look at a situation with only one obstacle. 
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{fig/polorovina.png} 
+\caption{half plane, --template of the final picture}
+\label{fig:half_plain}
+\end{center}
+\end{figure}
 
+Half plane can be can be represented by the equation $y \leq kx + q$  where $x$ and $y$ are the allowed positions of UAV and $k$ is the slope of the line and $q$ is the bias of the line. For easier work, these equations can be rewritten as
 
+\begin{equation}
+\label{eq:simple_obstacle_cond}
+s(y - kx - q) \leq 0
+\end{equation}
 
+where $s = \pm 1$. This is an inequality defining one obstacle by one half plain. 
+These constants can be found as 
 
+\begin{equation}
+\label{eq:obstacle_constants}
+\begin{split}
+k = -\frac{y_{obs} - y_{UAV}}{x_{obs} - x_{UAV}}\\
+b_x = (x_{obs}-x_{UAV})\cdot \big(1-\frac{r_{obs}+R_{UAV}}{\sqrt{(x_{obs} - x)^2 + (y_{obs} - y)^2}} \big)\\
+b_y = (y_{obs}-y_{UAV})\cdot \big(1-\frac{r_{obs}+R_{UAV}}{\sqrt{(x_{obs} - x)^2 + (y_{obs} - y)^2}} \big)\\
+q = b_y - kb_x\\
+s = sign(y).
+\end{split}
+\end{equation}
 
+The $b_x$ and $b_y$ is a position of the intersection of the constraining line and the obstacle circle with diameter $R_{UAV}+r_{obs}$. 
+Until now, we have been computing in the space of positions. These constraints have to be transformed into an input action constraints. This is an inverse transformation to what we have been doing until now. For the purposes of MPC matrices $\textbf{A}_c $ and $\textbf{B}_c$ have to be found to fit the condition \ref{eq:MPC_cond}. We already know the transformation \ref{eq:prediction_final} of input actions and initial condition to the predicted states. However, the vector $\textbf{\underline{x}}$ contains all the predicted states for both axis. We are interested in separating just positions $x$ and $y$ into the column vectors $\vec{x}$ and $\vec{y}$ of size $T$ as 
 
+\begin{equation}
+\vec{x} =
+  \begin{bmatrix}
+  x_{[1]} \\
+  x_{[2]} \\
+  ...	   \\
+  x_{[T]}
+  \end{bmatrix},\vec{y} = \begin{bmatrix}
+  y_{[1]} \\
+  y_{[2]} \\
+  ...	   \\
+  y_{[T]}
+  \end{bmatrix},
+\end{equation}
 
+where $x_{[t]}$ is the predicted position $x$ at the time $t$ and $y_{[t]}$ is the predicted position $y$ at the time $t$.
+These vectors are found with the submatrices $\textbf{A}_x$, $\textbf{B}_x$, $\textbf{A}_y$, $\textbf{B}_y$ as
 
+\begin{equation}
+\label{eq:pos_matrixes}
+\begin{split}
+\vec{x} = \textbf{A}_x \textbf{x}_{[0]} + \textbf{B}_x \textbf{\underline{u}} \\
+\vec{y} = \textbf{A}_y \textbf{x}_{[0]} + \textbf{B}_y \textbf{\underline{u}}, \\
+\end{split}
+\end{equation}
 
+where matrices $\textbf{A}_x, \textbf{A}_y$ $\in R^{T \times 6}$ and $\textbf{B}_x, \textbf{B}_y$ $\in R^{T \times 2T}$. These matrices are constant and for the computation purposes can be computed in advance and stored in memory. They take form of 
 
+\begin{equation}
+\begin{split}
+\textbf{A}_x = 
+\begin{bmatrix}
+\textbf{A}_{1, 1:6} \\
+\textbf{A}^2_{1, 1:6} \\
+\vdots \\
+\textbf{A}^{(T-1)}_{1, 1:6} \\
+\end{bmatrix}, 
+\textbf{A}_y = 
+\begin{bmatrix}
+\textbf{A}_{4, 1:6} \\
+\textbf{A}^2_{4, 1:6} \\
+\vdots \\
+\textbf{A}^{(T-1)}_{4, 1:6}
+\end{bmatrix}\\
+aa\\
+\textbf{B}_x = 
+\begin{bmatrix}
+\textbf{B}_{1, 1:2} & \textbf{0} & \textbf{0} & \textbf{0} \\
+\textbf{A}_{1, 1:6}\textbf{B} & \textbf{B}_{1, 1:2} & \textbf{0} & \textbf{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\textbf{A}^{(T-1)}_{1, 1:6}\textbf{B} & \textbf{A}^{(T-2)}_{1, 1:6}\textbf{B} & \hdots & \textbf{B}_{1, 1:2}
+\end{bmatrix}
+,
+\textbf{B}_y = 
+\begin{bmatrix}
+\textbf{B}_{4, 1:2} & \textbf{0} & \textbf{0} & \textbf{0} \\
+\textbf{A}_{4, 1:6}\textbf{B} & \textbf{B}_{4, 1:2} & \textbf{0} & \textbf{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\textbf{A}^{(T-1)}_{4, 1:6}\textbf{B} & \textbf{A}^{(T-2)}_{4, 1:6}\textbf{B} & \hdots & \textbf{B}_{4, 1:2}
+\end{bmatrix}
+\end{split}
+\end{equation}
 
+where $\textbf{A}_{i_1, i_2:i_3}$ is a matlab-like notation describing a submatrix of the matrix $\textbf{A}$ with the line $i_1$ and columns from $i_2$ to $i_3$. The equation \ref{eq:simple_obstacle_cond} is defined only for one position. It is important, that the UAV does not collide in any predicted position. Than the equation can be rewritten in the form 
 
+\begin{equation}
+\label{eq:vector_obstacle_cond}
+s(\vec{y} - k\vec{x} - \vec{q}) \leq 0.
+\end{equation}
 
+$\vec{q}$ is the column vector of the size $T$ and every member is $q$.
+ After the substitution of equation \ref{eq:pos_matrixes} into equation \ref{eq:vector_obstacle_cond} we get
+ 
+\begin{equation}
+\begin{split}
+s\big(\textbf{A}_y \textbf{x}_{[0]} + \textbf{B}_y \textbf{\underline{u}} - k(\textbf{A}_x \textbf{x}_{[0]} + \textbf{B}_x \textbf{\underline{u}}) - \vec{q}\big) \leq 0 \\
+\underbrace{s\big(\textbf{B}_y-k\textbf{B}_x\big)}_{\textbf{A}_c} \textbf{\underline{u}} +
+\underbrace{s\big(\textbf{A}_y \textbf{x}_{[0]} - k\textbf{A}_x \textbf{x}_{[0]} -k\vec{q}\big)}_{\textbf{B}_c} \leq 0.
+\end{split}
+\end{equation}
 
--- umi se vyhybat pohybujicim se objektum
--- 2 positions in convex space -> all trajectory
--- změřit poloměr helikoptéry
+One more improvement can be done to this algorithm. In this version, all the half planes of the obstacles are computed from the relative position of the initial condition. This means, that for example the last predicted position will be still constrained by the position some time ago. However we don't know the last position, because it can be computed from the vector $\textbf{\underline{u}}$ that we are searching for. If an assumption is made, that the predicted trajectory is very similar to the one in the previous step, we can use that one. The MPC loop runs in tens of Hz and the UAV doesn't change it's position very much in the one time step. This improvement is done by computing the previous trajectory using equation \ref{eq:prediction_final}. Than the constants $k_{i}, q_{i}, s_{i}$ need to be found for each predicted position $i, i\in\{1,...,T\}$ using the equation \ref{eq:obstacle_constants}. Than the equation \ref{eq:vector_obstacle_cond} can be rewritten in a matrix form as
+
+\begin{equation}
+\label{eq:matrix_obstacle_cond}
+\textbf{s}(\vec{y} - \textbf{k}\vec{x} - \vec{q}) \leq 0.
+\end{equation}
+
+where $\textbf{s}$ and $\textbf{k}$ are square diagonal matrices of the size $T$ and $\vec{q}$ is a column vector of the size $T$
+\begin{equation}
+\label{eq:obstacle_constants_matrices}
+\textbf{s} = \begin{bmatrix}
+s_1 & 0 & \hdots & 0 \\
+0 & s_2 & \hdots & \vdots \\
+0 & \hdots & \ddots & \vdots \\
+0 & \hdots & \hdots & s_T
+\end{bmatrix},
+\textbf{k} = \begin{bmatrix}
+k_1 & 0 & \hdots & 0 \\
+0 & k_2 & \hdots & \vdots \\
+0 & \hdots & \ddots & \vdots \\
+0 & \hdots & \hdots & k_T
+\end{bmatrix},
+\vec{q} = \begin{bmatrix}
+q_1 \\
+q_2 \\
+\vdots \\
+q_t
+\end{bmatrix},
+\end{equation}
+
+This algorithm takes much more time to compute, so it has not been implemented in experiments or simulations. Because of the UAV's hardware computational limitations, the loop must run as fast as possible. The standard solution uses only the initial condition for knowing position and computes once the constants from equation \ref{eq:obstacle_constants}. This is very fast operation. If we want to get different constants for each future positions, first we need to compute the predicted trajectory from the previous prediction using equation \ref{eq:prediction_final}. Because MPC is only required to compute action inputs, the predicted trajectory is not usually computed. Above that, the equation \ref{eq:obstacle_constants} \textcolor{red}{would had to been computed} for each time prediction, this means $T$ times. $T$ can be a large number, for example in the simulation sometimes as high as 500.
+
+Until now, we have been describing the case with only one obstacle. As described in the section \ref{sec:system_constraints}, the lines of constraining matrices $\textbf{A}_c$ and $\textbf{B}_c$  enforce independent conditions. If the computation \textcolor{red}{would have been done} independently for $N$ obstacles using the same procedure marking computed matrices $\textbf{A}_{c,i}$ and $\textbf{B}_{c,i}$, where $i \in {1, 2, ..., N}$ the final constraining matrices would take form of
+\begin{equation}
+\textbf{A}_c =
+  \begin{bmatrix}
+  \textbf{A}_{c,1} \\
+  \textbf{A}_{c,2} \\
+  ...	   \\
+  \textbf{A}_{c,N}
+  \end{bmatrix},\textbf{B}_c = \begin{bmatrix}
+  \textbf{B}_{c,1} \\
+  \textbf{B}_{c,2} \\
+  ...	   \\
+  \textbf{B}_{c,N}
+  \end{bmatrix}, 
+\end{equation}
+Now the task is fully defined and can be given to a LCQP solver to find the optimal $\underline{\textbf{u}}$. 
+
+\section{solving constrained LCQP}
+The MPC has 2 different parts. The first one is creating the objective function $\mathrm{J}(\underline{\textbf{u}})$ by matrices $\textbf{\^H}$ and $\textbf{\^c}$ and creating the constraining matrices $\textbf{A}_c$ and $\textbf{B}_c$. This part has been described in the previous sections. The second part is solving this problem defined in the equation \ref{eq:qmpc_main_quadratic_form}. We have already talked about solving this problem unconstrained using inverse matrix. This problem can't be solved analytically and there are only iterative methods. This means, that the solution is usually optimal, but close to optimal. There are several approaches for solving this problem.
+The first one is called Active set method \cite{schittkowski1983convergence}. The constraints are solved almost exactly. This method supposes, that the minimum lies on the constraint border. It searches only strictly feasible solutions. Some constraints play no role for the final result and some parts of constraints are prohibited by other constraints. This brings a high complexity. Because of it's analytic approach, it works well on noise-free problems when the exact optimum is needed. However, UAV's optical registration of obstacles and optical localization brings a high noise. Active set method is not not a good fit for this problem.
+
+The second method is a method of Lagrange multipliers. This is a very widely used strategy in many different tasks. It also assumes, that the the minimum lies on the constraining border. This is forced with the constraints defined as $g_i(\uvec) = 0, i \in \{1, 2, ..., N\}$ for $N$ constraint.This method requires, that the objective function and the constraints are differentiable. It uses a function called Lagrangian $\Lagr$
+
+\begin{equation}
+\label{Lagrangian}
+\Lagr(\uvec, \lambda_1, \lambda_2, ..., \lambda_N) = \mathrm{J}(\uvec) - \sum_{i = 1}^N \lambda_i g_i(\uvec)
+\end{equation}
+
+Than a solution must be found for $\nabla \Lagr = 0$. This would mean to solve a set of $T + N$ equations 
+
+\begin{equation}
+\label{Lagrangian}
+\begin{split}
+\frac{\partial \mathrm{J(\uvec)}}{\partial u_j} =  \sum_{i = 1}^N \frac{\partial \lambda_i g_i(\uvec) }{\partial u_j} \;\; and \;\;\frac{\partial \mathrm{J(\uvec)}}{\partial \lambda_i} =  \sum_{i = 1}^N \frac{\partial \lambda_i g_i(\uvec) }{\partial \lambda_i}\\
+i \in \{1, 2, ..., N\},\;\;j \in \{1, 2, ..., 2T\}
+\end{split}
+\end{equation}
+
+This is a simple idea, that the gradient of the objective function $J(\uvec)$ is perpendicular to all constraints. If not, it means, that there is a better solution. However, in our case the perpendicularity is not always true, as shows the figure ---????---. The problem is also in the defining the constraints, which are not in the form of inequality but equality and it is required to satisfy all of them. This means, that there has to exists an intersection of all the constraints. This is not very likely. Our constraints are defined with hyper plains. If even 2 hyper plains are parallel, this algorithm does not find any solution. These hyper plains have been described in the section \ref{sec:input_constraints}. If there is constrained a maximum thrust forwards and backwards. If defined as equality, this would mean, that the thrust must be maximum forwards and maximum backwards at the same time, which is logically impossible. This approach has to be also rejected.
+
+The third method is a Penalty method. It is used for example in optimizing SVM algorithm. It penalizes crossings of the constraints. It modifies the objective function by adding a penalty function, if a constraint is violated. The task is modified as 
+
+\begin{equation}
+min\;\;\mathrm{J}(\uvec) + \sigma\sum_{i = 0}^N g(c_i(\uvec))
+\end{equation}
+
+where $g(c_i(\uvec)) = min(0, c_i(\uvec)^2)$ is a positive number if the constraint $c_i$ has been violated and zero otherwise. This function is not easily differentiable, but after some adjustments, gradient descend can be used. The biggest disadvantage is, that the final solution very likely violates the constraints. Violating these constraints in our case means either giving higher input actions or a collision. It is obvious, that this algorithm can't be used either.  
+
 
 
 

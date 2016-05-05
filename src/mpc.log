@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  3 MAY 2016 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  6 MAY 2016 01:06
 entering extended mode
 **./mpc.tex
 (mpc.tex
@@ -204,21 +204,24 @@ G,.JBIG2,.JB2,.eps]
 
 LaTeX Warning: Label `eq:state_space_model_simple' multiply defined.
 
+
+LaTeX Warning: Label `Lagrangian' multiply defined.
+
 )
 \openout1 = `mpc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
@@ -235,40 +238,48 @@ LaTeX Font Info:    ... okay on input line 10.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no › in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no › in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
  [1
 
 {C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `tomas' on page 2 undefined on input line 58.
+LaTeX Warning: Citation `tomas' on page 2 undefined on input line 63.
 
 [2]
-Overfull \hbox (15.86024pt too wide) in paragraph at lines 96--97
+Overfull \hbox (15.86024pt too wide) in paragraph at lines 101--102
 \OT1/cmr/m/n/10 sys-tem in-puts at the time $\OML/cmm/m/it/10 t$\OT1/cmr/m/n/10
  . Ex-tended state vec-tor $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\O
 T1/cmr/m/n/10 )[]$
  []
 
 [3]
-Overfull \hbox (35.96057pt too wide) in paragraph at lines 157--160
+Overfull \hbox (35.96057pt too wide) in paragraph at lines 162--165
 []\OT1/cmr/m/n/10 Let's com-bine the se-quence of pre-dicted states into one ve
 c-tor $[] = ([][]\OML/cmm/m/it/10 ; [][]; :::; [][]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (14.81227pt too wide) in paragraph at lines 157--160
+Overfull \hbox (14.81227pt too wide) in paragraph at lines 162--165
 \OT1/cmr/m/n/10 and the se-quence of in-puts into $[] = ([][]\OML/cmm/m/it/10 ;
  [][]; [][]; [][]; :::; [][]; [][]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (11.27332pt too wide) in paragraph at lines 208--210
+Overfull \hbox (11.27332pt too wide) in paragraph at lines 213--215
 \OT1/cmr/m/n/10 where the de-sired state at the time $\OML/cmm/m/it/10 t$ \OT1/
 cmr/m/n/10 is $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\OT1/cmr/m/n/10
  )[]$.
  []
 
 
-Overfull \hbox (15.64832pt too wide) in paragraph at lines 208--210
+Overfull \hbox (15.64832pt too wide) in paragraph at lines 213--215
 \OT1/cmr/m/n/10 po-si-tions at cer-tain time as the dis-tance $\OML/cmm/m/it/10
  d \OT1/cmr/m/n/10 = []$
  []
@@ -276,28 +287,28 @@ Overfull \hbox (15.64832pt too wide) in paragraph at lines 208--210
 [4]
 
 LaTeX Warning: Citation `stein1970singular' on page 5 undefined on input line 2
-22.
+27.
 
 [5]
 
 LaTeX Warning: Reference `eq:qmpc_basic_formulation2' on page 6 undefined on in
-put line 259.
+put line 264.
 
 [6]
 
-LaTeX Warning: Reference `ssec:aa' on page 7 undefined on input line 319.
+LaTeX Warning: Reference `ssec:aa' on page 7 undefined on input line 324.
 
 
 LaTeX Warning: Citation `zometa2012implementation' on page 7 undefined on input
- line 322.
+ line 327.
 
 
 LaTeX Warning: Citation `chong2013introduction' on page 7 undefined on input li
-ne 341.
+ne 346.
 
 [7]
 
-LaTeX Warning: Citation `saturation' on page 8 undefined on input line 380.
+LaTeX Warning: Citation `saturation' on page 8 undefined on input line 386.
 
 Package epstopdf Info: Source file: <fig/step_constrained_2.eps>
 (epstopdf)                    date: 2016-04-06 12:53:09
@@ -308,14 +319,14 @@ f>
 (epstopdf)                    size: 8924 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_constrained_2-eps-
 converted-to.pdf fig/step_constrained_2.eps>
-(epstopdf)             \includegraphics on input line 388.
+(epstopdf)             \includegraphics on input line 394.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/step_constrained_2-eps-converted-to.pdf, id=35, 380.42125pt x 310.15875pt>
 File: fig/step_constrained_2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/step_constrained_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_constrained_2-eps-converted-to.pdf used on in
-put line 388.
+put line 394.
 (pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
 Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    date: 2016-04-06 12:59:43
@@ -326,7 +337,7 @@ Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    size: 7095 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_saturated_2-eps-co
 nverted-to.pdf fig/step_saturated_2.eps>
-(epstopdf)             \includegraphics on input line 393.
+(epstopdf)             \includegraphics on input line 399.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/step_saturated_2-eps-converted-to.pdf, id=36, 380.42125pt x 310.15875pt>
@@ -334,61 +345,83 @@ File: fig/step_saturated_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/step_saturated_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_saturated_2-eps-converted-to.pdf used on inpu
-t line 393.
+t line 399.
 (pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 387--397
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 393--403
  [][][] 
  []
 
 [8]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 414.
+LaTeX Warning: Command \textless invalid in math mode on input line 420.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 414.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 420.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 414.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 420.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 414.
+LaTeX Warning: Command \textless invalid in math mode on input line 420.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 414.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 420.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 414.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 420.
 
 [9 <./fig/step_constrained_2-eps-converted-to.pdf> <./fig/step_saturated_2-eps-
-converted-to.pdf>] <fig/convex_polytope.png, id=52, 816.04875pt x 443.256pt>
+converted-to.pdf>]
+
+LaTeX Warning: Reference `ssec:system_constraints' on page 10 undefined on inpu
+t line 429.
+
+<fig/convex_polytope.png, id=52, 816.04875pt x 443.256pt>
 File: fig/convex_polytope.png Graphic file (type png)
 
 <use fig/convex_polytope.png>
-Package pdftex.def Info: fig/convex_polytope.png used on input line 428.
+Package pdftex.def Info: fig/convex_polytope.png used on input line 434.
 (pdftex.def)             Requested size: 341.5519pt x 185.52371pt.
  [10 <./fig/convex_polytope.png>]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 437.
+LaTeX Warning: Command \textless invalid in math mode on input line 443.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 437.
+LaTeX Warning: Command \textless invalid in math mode on input line 443.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 437.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 443.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 437.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 443.
 
 [11] <fig/UAV_dimensions.png, id=59, 560.0925pt x 443.256pt>
 File: fig/UAV_dimensions.png Graphic file (type png)
 
 <use fig/UAV_dimensions.png>
-Package pdftex.def Info: fig/UAV_dimensions.png used on input line 501.
+Package pdftex.def Info: fig/UAV_dimensions.png used on input line 507.
 (pdftex.def)             Requested size: 172.5pt x 136.51515pt.
- [12 <./fig/UAV_dimensions.png>] [13] (mpc.aux)
+ [12 <./fig/UAV_dimensions.png>]
+<fig/polorovina.png, id=63, 307.1475pt x 202.95825pt>
+File: fig/polorovina.png Graphic file (type png)
+ <use fig/polorovina.png>
+Package pdftex.def Info: fig/polorovina.png used on input line 534.
+(pdftex.def)             Requested size: 207.0021pt x 136.7834pt.
+
+[13 <./fig/polorovina.png>]
+Overfull \hbox (33.1785pt too wide) in paragraph at lines 625--625
+[] 
+ []
+
+[14] [15]
+
+LaTeX Warning: Citation `schittkowski1983convergence' on page 16 undefined on i
+nput line 696.
+
+[16] [17] (mpc.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -397,13 +430,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3389 strings out of 493634
- 52221 string characters out of 3141320
- 125713 words of memory out of 3000000
- 6750 multiletter control sequences out of 15000+200000
+ 3406 strings out of 493634
+ 52575 string characters out of 3141320
+ 126819 words of memory out of 3000000
+ 6767 multiletter control sequences out of 15000+200000
  6530 words of font info for 24 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,21n,40p,1326b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,26n,40p,1326b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
@@ -412,13 +445,14 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on mpc.pdf (13 pages, 228862 bytes).
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on mpc.pdf (17 pages, 261452 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
