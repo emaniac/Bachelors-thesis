@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  7 MAY 2016 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  11 MAY 2016 18:19
 entering extended mode
 **./mpc.tex
 (mpc.tex
@@ -200,44 +200,293 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-(mpc.aux
+(C:\localTextFiles\tex\latex\pgf\frontendlayer\tikz.sty
+(C:\localTextFiles\tex\latex\pgf\basiclayer\pgf.sty
+(C:\localTextFiles\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks20
+)
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfutil-latex.def
+\pgfutil@abb=\box28
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfrcs.code.tex
+Package: pgfrcs 2010/11/07 v2.10-cvs (rcs-revision 1.25)
+))
+Package: pgf 2008/01/15 v2.10-cvs (rcs-revision 1.12)
+
+(C:\localTextFiles\tex\latex\pgf\basiclayer\pgfcore.sty
+(C:\localTextFiles\tex\latex\pgf\systemlayer\pgfsys.sty
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Package: pgfsys 2012/03/30 v2.10-cvs (rcs-revision 1.38)
+
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen121
+\pgf@y=\dimen122
+\pgf@xa=\dimen123
+\pgf@ya=\dimen124
+\pgf@xb=\dimen125
+\pgf@yb=\dimen126
+\pgf@xc=\dimen127
+\pgf@yc=\dimen128
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count103
+\c@pgf@countb=\count104
+\c@pgf@countc=\count105
+\c@pgf@countd=\count106
+
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 919.
+
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2012/09/26  (rcs-revision 1.28)
+
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count107
+\pgfsyssoftpath@bigbuffer@items=\count108
+)
+(C:\localTextFiles\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10-cvs (rcs-revision 1.7)
+
+(C:\localTextFiles\tex\generic\pgf\math\pgfmath.code.tex
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathcalc.code.tex
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathutil.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen129
+\pgfmath@count=\count109
+\pgfmath@box=\box29
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
+)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.code.tex
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+) (C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.base.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)
+(C:\localTextFiles\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.cod
+e.tex))) (C:\localTextFiles\tex\generic\pgf\math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count110
+))
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2012/01/06  (rcs-revision 1.21)
+\pgf@picminx=\dimen130
+\pgf@picmaxx=\dimen131
+\pgf@picminy=\dimen132
+\pgf@picmaxy=\dimen133
+\pgf@pathminx=\dimen134
+\pgf@pathmaxx=\dimen135
+\pgf@pathminy=\dimen136
+\pgf@pathmaxy=\dimen137
+\pgf@xx=\dimen138
+\pgf@xy=\dimen139
+\pgf@yx=\dimen140
+\pgf@yy=\dimen141
+\pgf@zx=\dimen142
+\pgf@zy=\dimen143
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2011/04/17  (rcs-revision 1.25)
+\pgf@path@lastx=\dimen144
+\pgf@path@lasty=\dimen145
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen146
+\pgf@shorten@start@additional=\dimen147
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2011/10/01  (rcs-revision 1.37)
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count111
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen148
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2012/01/06  (rcs-revision 1.12)
+\pgf@pt@x=\dimen149
+\pgf@pt@y=\dimen150
+\pgf@pt@temp=\dimen151
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2011/06/07  (rcs-revision 1.12)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen152
+\pgf@sys@shading@range@num=\count112
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2012/06/18  (rcs-revision 1.19)
+\pgfexternal@startupbox=\box33
+))
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2011/10/02  (rcs-revision 1.4)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(C:\localTextFiles\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(C:\localTextFiles\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2012/08/29  (rcs-revision 1.22)
+\pgfnodeparttextbox=\box34
+)
+(C:\localTextFiles\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2011/10/22  (rcs-revision 1.10)
+)
+(C:\localTextFiles\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10-cvs (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen153
+\pgf@nodesepend=\dimen154
+)
+(C:\localTextFiles\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10-cvs (rcs-revision 1.1)
+))
+(C:\localTextFiles\tex\latex\pgf\utilities\pgffor.sty
+(C:\localTextFiles\tex\latex\pgf\utilities\pgfkeys.sty
+(C:\localTextFiles\tex\generic\pgf\utilities\pgfkeys.code.tex))
+(C:\localTextFiles\tex\latex\pgf\math\pgfmath.sty
+(C:\localTextFiles\tex\generic\pgf\math\pgfmath.code.tex))
+(C:\localTextFiles\tex\generic\pgf\utilities\pgffor.code.tex
+Package: pgffor 2012/08/27 v2.10-cvs (rcs-revision 1.22)
+
+(C:\localTextFiles\tex\generic\pgf\math\pgfmath.code.tex)
+\pgffor@iter=\dimen155
+\pgffor@skip=\dimen156
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Package: tikz 2012/08/29 v2.10-cvs (rcs-revision 1.100)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2012/09/11 v2.10-cvs (rcs-revision 1.17)
+\pgf@plot@mark@count=\count113
+\pgfplotmarksize=\dimen157
+)
+\tikz@lastx=\dimen158
+\tikz@lasty=\dimen159
+\tikz@lastxsaved=\dimen160
+\tikz@lastysaved=\dimen161
+\tikzleveldistance=\dimen162
+\tikzsiblingdistance=\dimen163
+\tikz@figbox=\box35
+\tikz@tempbox=\box36
+\tikztreelevel=\count114
+\tikznumberofchildren=\count115
+\tikznumberofcurrentchild=\count116
+\tikz@fig@count=\count117
+
+(C:\localTextFiles\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count118
+\pgfmatrixcurrentcolumn=\count119
+\pgf@matrix@numberofcolumns=\count120
+)
+\tikz@expandcount=\count121
+
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopa
+ths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10-cvs (rcs-revision 1.2)
+))) (mpc.aux
 
 LaTeX Warning: Label `eq:state_space_model_simple' multiply defined.
 
 
 LaTeX Warning: Label `Lagrangian' multiply defined.
 
+
+LaTeX Warning: Label `fig:move_blocking' multiply defined.
+
 )
 \openout1 = `mpc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen121
-\scratchbox=\box28
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen122
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count122
+\scratchdimen=\dimen164
+\scratchbox=\box37
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen165
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks30
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ ABD: EveryShipout initializing macros
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no › in font cmr10!
 Missing character: There is no Å in font cmr10!
@@ -250,36 +499,36 @@ Missing character: There is no © in font cmr10!
 
 {C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `tomas' on page 2 undefined on input line 63.
+LaTeX Warning: Citation `tomas' on page 2 undefined on input line 79.
 
 [2]
-Overfull \hbox (15.86024pt too wide) in paragraph at lines 101--102
+Overfull \hbox (15.86024pt too wide) in paragraph at lines 117--118
 \OT1/cmr/m/n/10 sys-tem in-puts at the time $\OML/cmm/m/it/10 t$\OT1/cmr/m/n/10
  . Ex-tended state vec-tor $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\O
 T1/cmr/m/n/10 )[]$
  []
 
 [3]
-Overfull \hbox (35.96057pt too wide) in paragraph at lines 162--165
+Overfull \hbox (35.96057pt too wide) in paragraph at lines 178--181
 []\OT1/cmr/m/n/10 Let's com-bine the se-quence of pre-dicted states into one ve
 c-tor $[] = ([][]\OML/cmm/m/it/10 ; [][]; :::; [][]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (14.81227pt too wide) in paragraph at lines 162--165
+Overfull \hbox (14.81227pt too wide) in paragraph at lines 178--181
 \OT1/cmr/m/n/10 and the se-quence of in-puts into $[] = ([][]\OML/cmm/m/it/10 ;
  [][]; [][]; [][]; :::; [][]; [][]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (11.27332pt too wide) in paragraph at lines 213--215
+Overfull \hbox (11.27332pt too wide) in paragraph at lines 229--231
 \OT1/cmr/m/n/10 where the de-sired state at the time $\OML/cmm/m/it/10 t$ \OT1/
 cmr/m/n/10 is $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\OT1/cmr/m/n/10
  )[]$.
  []
 
 
-Overfull \hbox (15.64832pt too wide) in paragraph at lines 213--215
+Overfull \hbox (15.64832pt too wide) in paragraph at lines 229--231
 \OT1/cmr/m/n/10 po-si-tions at cer-tain time as the dis-tance $\OML/cmm/m/it/10
  d \OT1/cmr/m/n/10 = []$
  []
@@ -287,28 +536,28 @@ Overfull \hbox (15.64832pt too wide) in paragraph at lines 213--215
 [4]
 
 LaTeX Warning: Citation `stein1970singular' on page 5 undefined on input line 2
-27.
+43.
 
 [5]
 
 LaTeX Warning: Reference `eq:qmpc_basic_formulation2' on page 6 undefined on in
-put line 264.
+put line 280.
 
 [6]
 
-LaTeX Warning: Reference `ssec:aa' on page 7 undefined on input line 324.
+LaTeX Warning: Reference `ssec:aa' on page 7 undefined on input line 340.
 
 
 LaTeX Warning: Citation `zometa2012implementation' on page 7 undefined on input
- line 327.
+ line 343.
 
 
 LaTeX Warning: Citation `chong2013introduction' on page 7 undefined on input li
-ne 346.
+ne 362.
 
 [7]
 
-LaTeX Warning: Citation `saturation' on page 8 undefined on input line 386.
+LaTeX Warning: Citation `saturation' on page 8 undefined on input line 402.
 
 Package epstopdf Info: Source file: <fig/step_constrained_2.eps>
 (epstopdf)                    date: 2016-04-06 12:53:09
@@ -319,14 +568,14 @@ f>
 (epstopdf)                    size: 8924 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_constrained_2-eps-
 converted-to.pdf fig/step_constrained_2.eps>
-(epstopdf)             \includegraphics on input line 394.
+(epstopdf)             \includegraphics on input line 410.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_constrained_2-eps-converted-to.pdf, id=35, 380.42125pt x 310.15875pt>
+<fig/step_constrained_2-eps-converted-to.pdf, id=38, 380.42125pt x 310.15875pt>
 File: fig/step_constrained_2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/step_constrained_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_constrained_2-eps-converted-to.pdf used on in
-put line 394.
+put line 410.
 (pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
 Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    date: 2016-04-06 12:59:43
@@ -337,82 +586,106 @@ Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    size: 7095 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_saturated_2-eps-co
 nverted-to.pdf fig/step_saturated_2.eps>
-(epstopdf)             \includegraphics on input line 399.
+(epstopdf)             \includegraphics on input line 415.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_saturated_2-eps-converted-to.pdf, id=36, 380.42125pt x 310.15875pt>
+<fig/step_saturated_2-eps-converted-to.pdf, id=39, 380.42125pt x 310.15875pt>
 File: fig/step_saturated_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/step_saturated_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_saturated_2-eps-converted-to.pdf used on inpu
-t line 399.
+t line 415.
 (pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 393--403
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 409--419
  [][][] 
  []
 
 [8]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 420.
+LaTeX Warning: Command \textless invalid in math mode on input line 435.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 420.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 435.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 420.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 435.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 420.
+LaTeX Warning: Command \textless invalid in math mode on input line 435.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 420.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 435.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 420.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 435.
 
 [9 <./fig/step_constrained_2-eps-converted-to.pdf> <./fig/step_saturated_2-eps-
 converted-to.pdf>]
 
 LaTeX Warning: Reference `ssec:system_constraints' on page 10 undefined on inpu
-t line 429.
+t line 444.
 
-<fig/convex_polytope.png, id=52, 816.04875pt x 443.256pt>
-File: fig/convex_polytope.png Graphic file (type png)
+Package epstopdf Info: Source file: <fig/convex_polytope.eps>
+(epstopdf)                    date: 2016-05-10 20:39:31
+(epstopdf)                    size: 1682671 bytes
+(epstopdf)             Output file: <fig/convex_polytope-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-10 20:39:35
+(epstopdf)                    size: 15598 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/convex_polytope-eps-con
+verted-to.pdf fig/convex_polytope.eps>
+(epstopdf)             \includegraphics on input line 451.
+Package epstopdf Info: Output file is already uptodate.
+<fig/convex_polytope-eps-converted-to.pdf, id=55, 525.965pt x 287.0725pt>
+File: fig/convex_polytope-eps-converted-to.pdf Graphic file (type pdf)
 
-<use fig/convex_polytope.png>
-Package pdftex.def Info: fig/convex_polytope.png used on input line 434.
-(pdftex.def)             Requested size: 341.5519pt x 185.52371pt.
- [10 <./fig/convex_polytope.png>]
-
-LaTeX Warning: Command \textless invalid in math mode on input line 443.
+<use fig/convex_polytope-eps-converted-to.pdf>
+Package pdftex.def Info: fig/convex_polytope-eps-converted-to.pdf used on input
+ line 451.
+(pdftex.def)             Requested size: 241.49895pt x 131.80965pt.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 443.
+LaTeX Warning: Command \textless invalid in math mode on input line 460.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 443.
+LaTeX Warning: Command \textless invalid in math mode on input line 460.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 443.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 460.
 
-[11] <fig/UAV_dimensions.png, id=59, 560.0925pt x 443.256pt>
-File: fig/UAV_dimensions.png Graphic file (type png)
 
-<use fig/UAV_dimensions.png>
-Package pdftex.def Info: fig/UAV_dimensions.png used on input line 507.
-(pdftex.def)             Requested size: 172.5pt x 136.51515pt.
- [12 <./fig/UAV_dimensions.png>]
-<fig/polorovina.png, id=63, 307.1475pt x 202.95825pt>
+LaTeX Warning: Command \textgreater invalid in math mode on input line 460.
+
+[10 <./fig/convex_polytope-eps-converted-to.pdf>] [11]
+Package epstopdf Info: Source file: <fig/UAV_dimensions.eps>
+(epstopdf)                    date: 2016-05-10 20:36:34
+(epstopdf)                    size: 1693252 bytes
+(epstopdf)             Output file: <fig/UAV_dimensions-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-10 20:36:40
+(epstopdf)                    size: 21050 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/UAV_dimensions-eps-conv
+erted-to.pdf fig/UAV_dimensions.eps>
+(epstopdf)             \includegraphics on input line 524.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/UAV_dimensions-eps-converted-to.pdf, id=66, 428.60126pt x 413.545pt>
+File: fig/UAV_dimensions-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/UAV_dimensions-eps-converted-to.pdf>
+Package pdftex.def Info: fig/UAV_dimensions-eps-converted-to.pdf used on input 
+line 524.
+(pdftex.def)             Requested size: 172.5pt x 166.4373pt.
+ [12 <./fig/UAV_dimensions-eps-converted-to.pdf>] <fig/polorovina.png, id=74, 3
+07.1475pt x 202.95825pt>
 File: fig/polorovina.png Graphic file (type png)
- <use fig/polorovina.png>
-Package pdftex.def Info: fig/polorovina.png used on input line 534.
-(pdftex.def)             Requested size: 207.0021pt x 136.7834pt.
 
-[13 <./fig/polorovina.png>]
-Overfull \hbox (33.1785pt too wide) in paragraph at lines 625--625
+<use fig/polorovina.png>
+Package pdftex.def Info: fig/polorovina.png used on input line 551.
+(pdftex.def)             Requested size: 207.0021pt x 136.7834pt.
+ [13 <./fig/polorovina.png>]
+Overfull \hbox (33.1785pt too wide) in paragraph at lines 641--641
 [] 
  []
 
@@ -422,9 +695,120 @@ Missing character: There is no ¼ in font cmr10!
  [16]
 
 LaTeX Warning: Citation `schittkowski1983convergence' on page 17 undefined on i
-nput line 699.
+nput line 715.
 
-[17] [18] (mpc.aux)
+[17]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 747.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 747.
+ [18]
+Package epstopdf Info: Source file: <fig/barrier_function2.eps>
+(epstopdf)                    date: 2016-05-08 13:55:35
+(epstopdf)                    size: 48677 bytes
+(epstopdf)             Output file: <fig/barrier_function2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-05-08 13:55:54
+(epstopdf)                    size: 13975 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/barrier_function2-eps-c
+onverted-to.pdf fig/barrier_function2.eps>
+(epstopdf)             \includegraphics on input line 784.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/barrier_function2-eps-converted-to.pdf, id=95, 539.01375pt x 204.765pt>
+File: fig/barrier_function2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/barrier_function2-eps-converted-to.pdf>
+Package pdftex.def Info: fig/barrier_function2-eps-converted-to.pdf used on inp
+ut line 784.
+(pdftex.def)             Requested size: 379.5021pt x 144.16873pt.
+
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 784--785
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19] [20 <./fig/barrier_function2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/feasibility_paint.eps>
+(epstopdf)                    date: 2016-05-10 20:35:25
+(epstopdf)                    size: 1663763 bytes
+(epstopdf)             Output file: <fig/feasibility_paint-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-05-10 20:35:38
+(epstopdf)                    size: 12101 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/feasibility_paint-eps-c
+onverted-to.pdf fig/feasibility_paint.eps>
+(epstopdf)             \includegraphics on input line 829.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/feasibility_paint-eps-converted-to.pdf, id=107, 524.96124pt x 286.06876pt>
+File: fig/feasibility_paint-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/feasibility_paint-eps-converted-to.pdf>
+Package pdftex.def Info: fig/feasibility_paint-eps-converted-to.pdf used on inp
+ut line 829.
+(pdftex.def)             Requested size: 310.4979pt x 169.20688pt.
+ [21 <./fig/feasibility_paint-eps-converted-to.pdf>] [22]
+Package epstopdf Info: Source file: <fig/move_blocking_u.eps>
+(epstopdf)                    date: 2016-05-09 22:29:03
+(epstopdf)                    size: 28022 bytes
+(epstopdf)             Output file: <fig/move_blocking_u-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-09 22:57:38
+(epstopdf)                    size: 5277 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/move_blocking_u-eps-con
+verted-to.pdf fig/move_blocking_u.eps>
+(epstopdf)             \includegraphics on input line 854.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/move_blocking_u-eps-converted-to.pdf, id=118, 684.5575pt x 220.825pt>
+File: fig/move_blocking_u-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/move_blocking_u-eps-converted-to.pdf>
+Package pdftex.def Info: fig/move_blocking_u-eps-converted-to.pdf used on input
+ line 854.
+(pdftex.def)             Requested size: 345.0pt x 111.29166pt.
+ [23 <./fig/move_blocking_u-eps-converted-to.pdf>] [24]
+
+LaTeX Warning: Citation `tom' on page 25 undefined on input line 919.
+
+
+Package caption Warning: \label without proper reference on input line 922.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:Cutom_board' on page 25 undefined on input line 9
+19.
+
+
+LaTeX Warning: Citation `tom' on page 25 undefined on input line 919.
+
+<fig/board1.jpg, id=129, 2055.68pt x 1659.19875pt>
+File: fig/board1.jpg Graphic file (type jpg)
+ <use fig/board1.jpg>
+Package pdftex.def Info: fig/board1.jpg used on input line 927.
+(pdftex.def)             Requested size: 177.67479pt x 143.39719pt.
+
+<fig/board2.jpg, id=130, 2320.67pt x 2039.62pt>
+File: fig/board2.jpg Graphic file (type jpg)
+ <use fig/board2.jpg>
+Package pdftex.def Info: fig/board2.jpg used on input line 953.
+(pdftex.def)             Requested size: 167.32521pt x 147.05171pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25] [26 <./fig/board1.jpg> <./fig/board2.jpg>]
+<fig/experiment_photo.jpg, id=138, 5513.59875pt x 3675.7325pt>
+File: fig/experiment_photo.jpg Graphic file (type jpg)
+
+<use fig/experiment_photo.jpg>
+Package pdftex.def Info: fig/experiment_photo.jpg used on input line 1006.
+(pdftex.def)             Requested size: 172.5pt x 114.97853pt.
+ [27] [28 <./fig/experiment_photo.jpg>] (mpc.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -433,13 +817,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3406 strings out of 493634
- 52575 string characters out of 3141320
- 126819 words of memory out of 3000000
- 6767 multiletter control sequences out of 15000+200000
+ 11984 strings out of 493634
+ 225682 string characters out of 3141320
+ 281154 words of memory out of 3000000
+ 15137 multiletter control sequences out of 15000+200000
  6530 words of font info for 24 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,26n,40p,3000b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,26n,55p,3000b,837s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
@@ -453,9 +837,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on mpc.pdf (18 pages, 265132 bytes).
+Output written on mpc.pdf (28 pages, 8999142 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
