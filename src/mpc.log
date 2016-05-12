@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  11 MAY 2016 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  12 MAY 2016 22:03
 entering extended mode
 **./mpc.tex
 (mpc.tex
@@ -6,8 +6,8 @@ LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -445,7 +445,343 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 (C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopa
 ths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10-cvs (rcs-revision 1.2)
-))) (mpc.aux
+))) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks31
+\verbatim@line=\toks32
+\verbatim@in@stream=\read2
+)
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarro
+ws.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1.1)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2008/10/27 v2.10-cvs (rcs-revision 1.9)
+\arrowsize=\dimen164
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryauto
+mata.code.tex
+File: tikzlibraryautomata.code.tex 2008/07/14 v2.10-cvs (rcs-revision 1.3)
+
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1
+.1)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.multipart.
+code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v2.10-cvs (rcs-revision 1.
+2)
+\pgfnodepartlowerbox=\box37
+\pgfnodeparttwobox=\box38
+\pgfnodepartthreebox=\box39
+\pgfnodepartfourbox=\box40
+\pgfnodeparttwentybox=\box41
+\pgfnodepartnineteenbox=\box42
+\pgfnodeparteighteenbox=\box43
+\pgfnodepartseventeenbox=\box44
+\pgfnodepartsixteenbox=\box45
+\pgfnodepartfifteenbox=\box46
+\pgfnodepartfourteenbox=\box47
+\pgfnodepartthirteenbox=\box48
+\pgfnodeparttwelvebox=\box49
+\pgfnodepartelevenbox=\box50
+\pgfnodeparttenbox=\box51
+\pgfnodepartninebox=\box52
+\pgfnodeparteightbox=\box53
+\pgfnodepartsevenbox=\box54
+\pgfnodepartsixbox=\box55
+\pgfnodepartfivebox=\box56
+)))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1.1)
+
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1
+.1)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.
+code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v2.10-cvs (rcs-revision 1.
+1)
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1.1)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.misc.code.
+tex
+File: pgflibraryshapes.misc.code.tex 2008/10/07 v2.10-cvs (rcs-revision 1.3)
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1.1
+)
+
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.symbols.co
+de.tex
+File: pgflibraryshapes.symbols.code.tex 2009/10/27 v2.10-cvs (rcs-revision 1.3)
+
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v2.10-cvs (rcs-revision 1.1)
+
+
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.arrows.cod
+e.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v2.10-cvs (rcs-revision 1.1)
+))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshap
+es.callouts.code.tex
+(C:\localTextFiles\tex\generic\pgf\libraries\shapes\pgflibraryshapes.callouts.c
+ode.tex)))
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryposi
+tioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10-cvs (rcs-revision 1.7)
+)
+(C:\localTextFiles\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc
+.code.tex
+File: tikzlibrarycalc.code.tex 2012/05/06 v2.10-cvs (rcs-revision 1.8)
+) (mpc.aux
 
 LaTeX Warning: Label `eq:state_space_model_simple' multiply defined.
 
@@ -453,112 +789,85 @@ LaTeX Warning: Label `eq:state_space_model_simple' multiply defined.
 LaTeX Warning: Label `Lagrangian' multiply defined.
 
 
+LaTeX Warning: Label `fig:feasibility_algorithm' multiply defined.
+
+
 LaTeX Warning: Label `fig:move_blocking' multiply defined.
 
 )
 \openout1 = `mpc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
-\scratchdimen=\dimen164
-\scratchbox=\box37
+\scratchdimen=\dimen165
+\scratchbox=\box57
 \nofMPsegments=\count123
 \nofMParguments=\count124
-\everyMPshowfont=\toks29
+\everyMPshowfont=\toks33
 \MPscratchCnt=\count125
-\MPscratchDim=\dimen165
+\MPscratchDim=\dimen166
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks30
+\everyMPtoPDFconversion=\toks34
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- ABD: EveryShipout initializing macros
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no › in font cmr10!
-Missing character: There is no Å in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no › in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
- [1
+ ABD: EveryShipout initializing macros [1
 
-{C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 
-LaTeX Warning: Citation `tomas' on page 2 undefined on input line 79.
-
-[2]
-Overfull \hbox (15.86024pt too wide) in paragraph at lines 117--118
-\OT1/cmr/m/n/10 sys-tem in-puts at the time $\OML/cmm/m/it/10 t$\OT1/cmr/m/n/10
- . Ex-tended state vec-tor $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\O
-T1/cmr/m/n/10 )[]$
- []
+LaTeX Warning: Citation `tomas' on page 3 undefined on input line 142.
 
 [3]
-Overfull \hbox (35.96057pt too wide) in paragraph at lines 178--181
-[]\OT1/cmr/m/n/10 Let's com-bine the se-quence of pre-dicted states into one ve
-c-tor $[] = ([][]\OML/cmm/m/it/10 ; [][]; :::; [][]\OT1/cmr/m/n/10 )[]$
- []
+
+LaTeX Warning: Citation `tom' on page 4 undefined on input line 176.
 
 
-Overfull \hbox (14.81227pt too wide) in paragraph at lines 178--181
-\OT1/cmr/m/n/10 and the se-quence of in-puts into $[] = ([][]\OML/cmm/m/it/10 ;
- [][]; [][]; [][]; :::; [][]; [][]\OT1/cmr/m/n/10 )[]$
- []
-
-
-Overfull \hbox (11.27332pt too wide) in paragraph at lines 229--231
-\OT1/cmr/m/n/10 where the de-sired state at the time $\OML/cmm/m/it/10 t$ \OT1/
-cmr/m/n/10 is $[][] = (\OML/cmm/m/it/10 x[]; []; []; y[]; []; []\OT1/cmr/m/n/10
- )[]$.
- []
-
-
-Overfull \hbox (15.64832pt too wide) in paragraph at lines 229--231
-\OT1/cmr/m/n/10 po-si-tions at cer-tain time as the dis-tance $\OML/cmm/m/it/10
- d \OT1/cmr/m/n/10 = []$
+Overfull \hbox (31.2227pt too wide) in paragraph at lines 198--200
+\OT1/cmr/m/n/10.95 sys-tem in-puts at the time $\OML/cmm/m/it/10.95 t$\OT1/cmr/
+m/n/10.95 . Ex-tended state vec-tor $[][] = (\OML/cmm/m/it/10.95 x[]; []; []; y
+[]; []; []\OT1/cmr/m/n/10.95 )[]$
  []
 
 [4]
 
-LaTeX Warning: Citation `stein1970singular' on page 5 undefined on input line 2
-43.
-
-[5]
-
-LaTeX Warning: Reference `eq:qmpc_basic_formulation2' on page 6 undefined on in
-put line 280.
-
-[6]
-
-LaTeX Warning: Reference `ssec:aa' on page 7 undefined on input line 340.
+LaTeX Warning: Citation `tom' on page 5 undefined on input line 215.
 
 
-LaTeX Warning: Citation `zometa2012implementation' on page 7 undefined on input
- line 343.
+Overfull \hbox (119.30734pt too wide) in paragraph at lines 249--252
+$\OT1/cmr/m/n/10.95 ([][]\OML/cmm/m/it/10.95 ; [][]; :::; [][]\OT1/cmr/m/n/10.9
+5 )[]$ and the se-quence of in-puts into $[] = ([][]\OML/cmm/m/it/10.95 ; [][];
+ [][]; [][]; :::; [][]; [][]\OT1/cmr/m/n/10.95 )[]$
+ []
+
+[5] [6]
+
+LaTeX Warning: Citation `stein1970singular' on page 7 undefined on input line 3
+18.
+
+[7] [8]
+
+LaTeX Warning: Citation `zometa2012implementation' on page 9 undefined on input
+ line 416.
 
 
-LaTeX Warning: Citation `chong2013introduction' on page 7 undefined on input li
-ne 362.
+LaTeX Warning: Citation `chong2013introduction' on page 9 undefined on input li
+ne 432.
 
-[7]
-
-LaTeX Warning: Citation `saturation' on page 8 undefined on input line 402.
-
+[9]
 Package epstopdf Info: Source file: <fig/step_constrained_2.eps>
 (epstopdf)                    date: 2016-04-06 12:53:09
 (epstopdf)                    size: 45211 bytes
@@ -568,15 +877,15 @@ f>
 (epstopdf)                    size: 8924 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_constrained_2-eps-
 converted-to.pdf fig/step_constrained_2.eps>
-(epstopdf)             \includegraphics on input line 410.
+(epstopdf)             \includegraphics on input line 472.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_constrained_2-eps-converted-to.pdf, id=38, 380.42125pt x 310.15875pt>
+<fig/step_constrained_2-eps-converted-to.pdf, id=45, 380.42125pt x 310.15875pt>
 File: fig/step_constrained_2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/step_constrained_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_constrained_2-eps-converted-to.pdf used on in
-put line 410.
-(pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
+put line 472.
+(pdftex.def)             Requested size: 198.0011pt x 161.43492pt.
 Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    date: 2016-04-06 12:59:43
 (epstopdf)                    size: 45697 bytes
@@ -586,47 +895,53 @@ Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    size: 7095 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_saturated_2-eps-co
 nverted-to.pdf fig/step_saturated_2.eps>
-(epstopdf)             \includegraphics on input line 415.
+(epstopdf)             \includegraphics on input line 477.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_saturated_2-eps-converted-to.pdf, id=39, 380.42125pt x 310.15875pt>
+<fig/step_saturated_2-eps-converted-to.pdf, id=46, 380.42125pt x 310.15875pt>
 File: fig/step_saturated_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/step_saturated_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_saturated_2-eps-converted-to.pdf used on inpu
-t line 415.
-(pdftex.def)             Requested size: 189.75105pt x 154.70984pt.
+t line 477.
+(pdftex.def)             Requested size: 198.0011pt x 161.43492pt.
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 409--419
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 471--481
  [][][] 
  []
 
-[8]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 435.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 435.
+
+LaTeX Warning: Citation `saturation' on page 10 undefined on input line 484.
+
+[10]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 498.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 498.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 435.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 498.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 435.
+LaTeX Warning: Command \textless invalid in math mode on input line 498.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 435.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 498.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 435.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 498.
 
-[9 <./fig/step_constrained_2-eps-converted-to.pdf> <./fig/step_saturated_2-eps-
-converted-to.pdf>]
+[11 <./fig/step_constrained_2-eps-converted-to.pdf> <./fig/step_saturated_2-eps
+-converted-to.pdf>]
 
-LaTeX Warning: Reference `ssec:system_constraints' on page 10 undefined on inpu
-t line 444.
+LaTeX Warning: Reference `ssec:system_constraints' on page 12 undefined on inpu
+t line 507.
 
 Package epstopdf Info: Source file: <fig/convex_polytope.eps>
 (epstopdf)                    date: 2016-05-10 20:39:31
@@ -636,29 +951,32 @@ Package epstopdf Info: Source file: <fig/convex_polytope.eps>
 (epstopdf)                    size: 15598 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/convex_polytope-eps-con
 verted-to.pdf fig/convex_polytope.eps>
-(epstopdf)             \includegraphics on input line 451.
+(epstopdf)             \includegraphics on input line 515.
 Package epstopdf Info: Output file is already uptodate.
-<fig/convex_polytope-eps-converted-to.pdf, id=55, 525.965pt x 287.0725pt>
+<fig/convex_polytope-eps-converted-to.pdf, id=61, 525.965pt x 287.0725pt>
 File: fig/convex_polytope-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/convex_polytope-eps-converted-to.pdf>
 Package pdftex.def Info: fig/convex_polytope-eps-converted-to.pdf used on input
- line 451.
-(pdftex.def)             Requested size: 241.49895pt x 131.80965pt.
+ line 515.
+(pdftex.def)             Requested size: 251.9989pt x 137.54355pt.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 460.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 460.
+LaTeX Warning: Command \textless invalid in math mode on input line 524.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 460.
+LaTeX Warning: Command \textless invalid in math mode on input line 524.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 460.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 524.
 
-[10 <./fig/convex_polytope-eps-converted-to.pdf>] [11]
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 524.
+
+[12] [13 <./fig/convex_polytope-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/UAV_dimensions.eps>
 (epstopdf)                    date: 2016-05-10 20:36:34
 (epstopdf)                    size: 1693252 bytes
@@ -667,45 +985,50 @@ Package epstopdf Info: Source file: <fig/UAV_dimensions.eps>
 (epstopdf)                    size: 21050 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/UAV_dimensions-eps-conv
 erted-to.pdf fig/UAV_dimensions.eps>
-(epstopdf)             \includegraphics on input line 524.
+(epstopdf)             \includegraphics on input line 588.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/UAV_dimensions-eps-converted-to.pdf, id=66, 428.60126pt x 413.545pt>
+<fig/UAV_dimensions-eps-converted-to.pdf, id=73, 428.60126pt x 413.545pt>
 File: fig/UAV_dimensions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/UAV_dimensions-eps-converted-to.pdf>
 Package pdftex.def Info: fig/UAV_dimensions-eps-converted-to.pdf used on input 
-line 524.
-(pdftex.def)             Requested size: 172.5pt x 166.4373pt.
- [12 <./fig/UAV_dimensions-eps-converted-to.pdf>] <fig/polorovina.png, id=74, 3
-07.1475pt x 202.95825pt>
+line 588.
+(pdftex.def)             Requested size: 180.0pt x 173.67508pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] <fig/polorovina.png, id=77, 307.1475pt x 202.95825pt>
 File: fig/polorovina.png Graphic file (type png)
 
 <use fig/polorovina.png>
-Package pdftex.def Info: fig/polorovina.png used on input line 551.
-(pdftex.def)             Requested size: 207.0021pt x 136.7834pt.
- [13 <./fig/polorovina.png>]
-Overfull \hbox (33.1785pt too wide) in paragraph at lines 641--641
+Package pdftex.def Info: fig/polorovina.png used on input line 615.
+(pdftex.def)             Requested size: 216.0022pt x 142.73253pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./fig/UAV_dimensions-eps-converted-to.pdf>] [16 <./fig/polorovina.png>]
+Overfull \hbox (43.0092pt too wide) in paragraph at lines 705--705
 [] 
  []
 
-[14] [15]
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¼ in font cmr10!
- [16]
+[17] [18]
 
-LaTeX Warning: Citation `schittkowski1983convergence' on page 17 undefined on i
-nput line 715.
+LaTeX Warning: Citation `schittkowski1983convergence' on page 19 undefined on i
+nput line 779.
 
-[17]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 747.
+[19] [20]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 811.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 747.
- [18]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 811.
+
+[21]
 Package epstopdf Info: Source file: <fig/barrier_function2.eps>
 (epstopdf)                    date: 2016-05-08 13:55:35
 (epstopdf)                    size: 48677 bytes
@@ -715,25 +1038,22 @@ Package epstopdf Info: Source file: <fig/barrier_function2.eps>
 (epstopdf)                    size: 13975 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/barrier_function2-eps-c
 onverted-to.pdf fig/barrier_function2.eps>
-(epstopdf)             \includegraphics on input line 784.
+(epstopdf)             \includegraphics on input line 848.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/barrier_function2-eps-converted-to.pdf, id=95, 539.01375pt x 204.765pt>
+<fig/barrier_function2-eps-converted-to.pdf, id=104, 539.01375pt x 204.765pt>
 File: fig/barrier_function2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/barrier_function2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/barrier_function2-eps-converted-to.pdf used on inp
-ut line 784.
-(pdftex.def)             Requested size: 379.5021pt x 144.16873pt.
+ut line 848.
+(pdftex.def)             Requested size: 396.0022pt x 150.43951pt.
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 784--785
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 848--849
  [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19] [20 <./fig/barrier_function2-eps-converted-to.pdf>]
+[22 <./fig/barrier_function2-eps-converted-to.pdf>] [23]
 Package epstopdf Info: Source file: <fig/feasibility_paint.eps>
 (epstopdf)                    date: 2016-05-10 20:35:25
 (epstopdf)                    size: 1663763 bytes
@@ -743,16 +1063,16 @@ Package epstopdf Info: Source file: <fig/feasibility_paint.eps>
 (epstopdf)                    size: 12101 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/feasibility_paint-eps-c
 onverted-to.pdf fig/feasibility_paint.eps>
-(epstopdf)             \includegraphics on input line 829.
+(epstopdf)             \includegraphics on input line 893.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/feasibility_paint-eps-converted-to.pdf, id=107, 524.96124pt x 286.06876pt>
+<fig/feasibility_paint-eps-converted-to.pdf, id=115, 524.96124pt x 286.06876pt>
 File: fig/feasibility_paint-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/feasibility_paint-eps-converted-to.pdf>
 Package pdftex.def Info: fig/feasibility_paint-eps-converted-to.pdf used on inp
-ut line 829.
-(pdftex.def)             Requested size: 310.4979pt x 169.20688pt.
- [21 <./fig/feasibility_paint-eps-converted-to.pdf>] [22]
+ut line 893.
+(pdftex.def)             Requested size: 323.9978pt x 176.56198pt.
+ [24 <./fig/feasibility_paint-eps-converted-to.pdf>] [25]
 Package epstopdf Info: Source file: <fig/move_blocking_u.eps>
 (epstopdf)                    date: 2016-05-09 22:29:03
 (epstopdf)                    size: 28022 bytes
@@ -761,54 +1081,78 @@ Package epstopdf Info: Source file: <fig/move_blocking_u.eps>
 (epstopdf)                    size: 5277 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/move_blocking_u-eps-con
 verted-to.pdf fig/move_blocking_u.eps>
-(epstopdf)             \includegraphics on input line 854.
+(epstopdf)             \includegraphics on input line 918.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/move_blocking_u-eps-converted-to.pdf, id=118, 684.5575pt x 220.825pt>
+<fig/move_blocking_u-eps-converted-to.pdf, id=127, 684.5575pt x 220.825pt>
 File: fig/move_blocking_u-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/move_blocking_u-eps-converted-to.pdf>
 Package pdftex.def Info: fig/move_blocking_u-eps-converted-to.pdf used on input
- line 854.
-(pdftex.def)             Requested size: 345.0pt x 111.29166pt.
- [23 <./fig/move_blocking_u-eps-converted-to.pdf>] [24]
+ line 918.
+(pdftex.def)             Requested size: 360.0pt x 116.13028pt.
 
-LaTeX Warning: Citation `tom' on page 25 undefined on input line 919.
+Overfull \hbox (6.67014pt too wide) in paragraph at lines 953--954
+[]\OT1/cmr/m/n/10.95 In the fig-ure 11[] have been used pre-dic-tion times $1\O
+ML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; :::; \OT1/cmr/m/n
+/10.95 9\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 10\OML/cmm/m/it/10.95 ; \OT1/c
+mr/m/n/10.95 20\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 30\OML/cmm/m/it/10.95 ;
+ :::; \OT1/cmr/m/n/10.95 100$.
+ []
+
+[26 <./fig/move_blocking_u-eps-converted-to.pdf>] [27]
+
+LaTeX Warning: Citation `tom' on page 28 undefined on input line 983.
 
 
-Package caption Warning: \label without proper reference on input line 922.
+Package caption Warning: \label without proper reference on input line 985.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:Cutom_board' on page 25 undefined on input line 9
-19.
+LaTeX Warning: Reference `fig:Cutom_board' on page 28 undefined on input line 9
+83.
 
 
-LaTeX Warning: Citation `tom' on page 25 undefined on input line 919.
+LaTeX Warning: Citation `tom' on page 28 undefined on input line 983.
 
-<fig/board1.jpg, id=129, 2055.68pt x 1659.19875pt>
+<fig/board1.jpg, id=138, 2055.68pt x 1659.19875pt>
 File: fig/board1.jpg Graphic file (type jpg)
  <use fig/board1.jpg>
-Package pdftex.def Info: fig/board1.jpg used on input line 927.
-(pdftex.def)             Requested size: 177.67479pt x 143.39719pt.
+Package pdftex.def Info: fig/board1.jpg used on input line 991.
+(pdftex.def)             Requested size: 185.39978pt x 149.62524pt.
 
-<fig/board2.jpg, id=130, 2320.67pt x 2039.62pt>
+<fig/board2.jpg, id=139, 2320.67pt x 2039.62pt>
 File: fig/board2.jpg Graphic file (type jpg)
  <use fig/board2.jpg>
-Package pdftex.def Info: fig/board2.jpg used on input line 953.
-(pdftex.def)             Requested size: 167.32521pt x 147.05171pt.
+Package pdftex.def Info: fig/board2.jpg used on input line 1017.
+(pdftex.def)             Requested size: 174.60022pt x 153.43173pt.
+ [28 <./fig/board1.jpg> <./fig/board2.jpg>]
+Package epstopdf Info: Source file: <fig/STM_xMega.eps>
+(epstopdf)                    date: 2016-05-12 21:13:57
+(epstopdf)                    size: 12253117 bytes
+(epstopdf)             Output file: <fig/STM_xMega-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-12 21:15:00
+(epstopdf)                    size: 90893 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig/STM_xMega-eps-converted
+-to.pdf fig/STM_xMega.eps>
+(epstopdf)             \includegraphics on input line 1050.
+Package epstopdf Info: Output file is already uptodate.
 
+<fig/STM_xMega-eps-converted-to.pdf, id=143, 614.295pt x 231.86626pt>
+File: fig/STM_xMega-eps-converted-to.pdf Graphic file (type pdf)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25] [26 <./fig/board1.jpg> <./fig/board2.jpg>]
-<fig/experiment_photo.jpg, id=138, 5513.59875pt x 3675.7325pt>
+<use fig/STM_xMega-eps-converted-to.pdf>
+Package pdftex.def Info: fig/STM_xMega-eps-converted-to.pdf used on input line 
+1050.
+(pdftex.def)             Requested size: 323.9978pt x 122.29413pt.
+ [29 <./fig/STM_xMega-eps-converted-to.pdf>] [30] <fig/experiment_photo.jpg, id
+=154, 5513.59875pt x 3675.7325pt>
 File: fig/experiment_photo.jpg Graphic file (type jpg)
 
 <use fig/experiment_photo.jpg>
-Package pdftex.def Info: fig/experiment_photo.jpg used on input line 1006.
-(pdftex.def)             Requested size: 172.5pt x 114.97853pt.
- [27] [28 <./fig/experiment_photo.jpg>] (mpc.aux)
+Package pdftex.def Info: fig/experiment_photo.jpg used on input line 1081.
+(pdftex.def)             Requested size: 180.0pt x 119.97028pt.
+ [31 <./fig/experiment_photo.jpg>] (mpc.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -817,29 +1161,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 11984 strings out of 493634
- 225682 string characters out of 3141320
- 281154 words of memory out of 3000000
- 15137 multiletter control sequences out of 15000+200000
- 6530 words of font info for 24 fonts, out of 3000000 for 9000
+ 14443 strings out of 493634
+ 290631 string characters out of 3141320
+ 378629 words of memory out of 3000000
+ 17516 multiletter control sequences out of 15000+200000
+ 10566 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,26n,55p,3000b,837s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,26n,69p,2956b,838s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on mpc.pdf (28 pages, 8999142 bytes).
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on mpc.pdf (31 pages, 9085639 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
+ 197 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
