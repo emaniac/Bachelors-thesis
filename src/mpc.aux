@@ -1,120 +1,140 @@
 \relax 
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Problem statement}{1}}
+\citation{tomas}
+\citation{endrych2014}
+\citation{tomas}
+\citation{whycon_icar}
+\citation{whycon_jint}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Previous work}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}UAV dynamics}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagram of the continuous system.\relax }}{2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:LTI}{{1}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Coordinate systems}{2}}
-\newlabel{ssec:coordinate_system}{{2.1}{2}}
-\newlabel{eq:coordinate_transform}{{1}{2}}
 \citation{tomas}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}One axis model}{3}}
-\newlabel{eq:state_space_model_simple}{{2}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Model predictive control formulation}{3}}
-\citation{tom}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Formulation of quadratic programming}{4}}
-\newlabel{eq:QP_formulation}{{4}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}{\color  {red} Linked/Extended} model}{4}}
-\newlabel{eq:state_space_model_simple}{{5}{4}}
-\citation{tom}
+\citation{tomas}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Coordinate systems}{3}}
+\newlabel{ssec:coordinate_system}{{2.1}{3}}
+\newlabel{eq:coordinate_transform}{{1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}State observer}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}One axis model}{4}}
+\newlabel{eq:state_space_model_simple}{{2}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Model predictive control formulation}{4}}
+\citation{tomas}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Formulation of quadratic programming}{5}}
+\newlabel{eq:QP_formulation}{{4}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}{\color  {red} Linked/Extended} model}{5}}
+\newlabel{eq:state_space_model_simple}{{5}{5}}
 \newlabel{eq:state_space}{{6}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}State observer}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}System prediction}{5}}
-\newlabel{eq:mpc_lti_system2}{{7}{5}}
-\newlabel{eq:mpc_lti_system_general}{{8}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}System prediction}{6}}
+\newlabel{eq:mpc_lti_system2}{{7}{6}}
+\newlabel{eq:mpc_lti_system_general}{{8}{6}}
 \newlabel{eq:prediction_big}{{9}{6}}
 \newlabel{eq:prediction_final}{{10}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Problem statement}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}MPC implementation}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Trajectory}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Objective function}{6}}
 \citation{stein1970singular}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Objective function}{7}}
 \newlabel{eq:simple_err}{{12}{7}}
-\newlabel{eq:qmpc_basic_formulation}{{13}{7}}
-\newlabel{eq:qmpc_sum}{{14}{7}}
+\newlabel{eq:qmpc_basic_formulation}{{13}{8}}
+\newlabel{eq:qmpc_sum}{{14}{8}}
 \newlabel{eq:qmpc_weighting_matrices_simple}{{15}{8}}
-\newlabel{eq:qmpc_weighting_matrices}{{16}{8}}
-\newlabel{eq:qmpc_counting}{{17}{8}}
 \citation{zometa2012implementation}
-\citation{chong2013introduction}
+\newlabel{eq:qmpc_weighting_matrices}{{16}{9}}
+\newlabel{eq:qmpc_counting}{{17}{9}}
 \newlabel{eq:mpc_objective_large}{{18}{9}}
 \newlabel{eq:qmpc_main_quadratic_form}{{19}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Solving QP unconstrained}{9}}
-\newlabel{eq:J_grad}{{20}{9}}
-\newlabel{eq:J_local_min}{{21}{9}}
-\citation{saturation}
+\citation{chong2013introduction}
+\newlabel{eq:J_grad}{{20}{10}}
+\newlabel{eq:J_local_min}{{21}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}System constraints}{10}}
 \newlabel{sec:system_constraints}{{4.4}{10}}
 \newlabel{eq:constraint_ineq_simple}{{22}{10}}
-\newlabel{eq:MPC_cond}{{23}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Input constraints}{10}}
-\newlabel{sec:input_constraints}{{4.5}{10}}
+\citation{saturation}
+\newlabel{eq:MPC_cond}{{23}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Input constraints}{11}}
+\newlabel{sec:input_constraints}{{4.5}{11}}
 \newlabel{fig:mpc_constrained}{{2a}{11}}
 \newlabel{sub@fig:mpc_constrained}{{a}{11}}
 \newlabel{fig:mpc_saturated}{{2b}{11}}
 \newlabel{sub@fig:mpc_saturated}{{b}{11}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Step response of the system using two approaches of saturation.\relax }}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Collision Avoidance}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Collision Avoidance}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Convexity}{12}}
 \newlabel{sec:convexity}{{5.1}{12}}
 \newlabel{eq:convexity_definition}{{25}{12}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Convexity of u}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Proof of the convexity of polytope}{12}}
-\newlabel{eq:convex_line}{{26}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Proof of the convexity of polytope}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces convex polytope.\relax }}{13}}
 \newlabel{fig:convex_polytope}{{3}{13}}
+\newlabel{eq:convex_line}{{26}{13}}
 \newlabel{eq:convex_u_proof}{{27}{13}}
-\newlabel{eq:conv_proof_1_less_2}{{30}{13}}
+\newlabel{eq:conv_proof_1_less_2}{{30}{14}}
 \newlabel{eq:conv_proof_2_less_1}{{31}{14}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Obstacles}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces UAV dimensions\relax }}{15}}
 \newlabel{fig:UAV_dimensions}{{4}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Creating allowed space}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces half plane, --template of the final picture\relax }}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Creating allowed space}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Creating prohibited half plain\relax }}{16}}
 \newlabel{fig:half_plain}{{5}{16}}
 \newlabel{eq:simple_obstacle_cond}{{33}{16}}
-\newlabel{eq:obstacle_constants}{{34}{16}}
+\newlabel{eq:obstacle_constants}{{34}{17}}
 \newlabel{eq:pos_matrixes}{{36}{17}}
-\newlabel{eq:vector_obstacle_cond}{{38}{17}}
+\newlabel{eq:vector_obstacle_cond}{{38}{18}}
 \newlabel{eq:matrix_obstacle_cond}{{40}{18}}
-\newlabel{eq:obstacle_constants_matrices}{{41}{18}}
+\newlabel{eq:obstacle_constants_matrices}{{41}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Solving constrained Quadratic Programming}{19}}
 \citation{schittkowski1983convergence}
-\@writefile{toc}{\contentsline {section}{\numberline {7}solving constrained LCQP}{19}}
-\newlabel{Lagrangian}{{43}{20}}
-\newlabel{Lagrangian}{{44}{20}}
-\newlabel{eq:sum_conv_def}{{46}{21}}
-\newlabel{eq:sum_conv_1}{{47}{21}}
+\newlabel{Lagrangian}{{43}{21}}
+\newlabel{Lagrangian}{{44}{21}}
+\newlabel{eq:sum_conv_def}{{46}{22}}
+\newlabel{eq:sum_conv_1}{{47}{22}}
 \newlabel{eq:plain_distance}{{48}{22}}
 \newlabel{eq:barrier_function}{{49}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Barrier function\relax }}{22}}
-\newlabel{fig:barrier_function}{{6}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Barrier function with one variable\relax }}{23}}
+\newlabel{fig:barrier_function}{{6}{23}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Gradient descent}{23}}
-\newlabel{eq:gradient_descend}{{50}{23}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Feasibility algorithm}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces feasibility algorithm.\relax }}{24}}
-\newlabel{fig:feasibility_algorithm}{{7}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Implementation of the gradient descend}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Move Blocking}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Move blocking implementation}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Move blocking algorithm in one axis\relax }}{26}}
-\newlabel{fig:move_blocking}{{8}{26}}
-\newlabel{eq:moveblocking_example}{{52}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Simulations and Hardware}{27}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}The Environment module}{27}}
-\citation{tom}
-\citation{tom}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}The UAV module}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}UAV custom board}{28}}
-\newlabel{fig:Cutom_board}{{\caption@xref {fig:Cutom_board}{ on input line 986}}{28}}
-\newlabel{fig:board_top}{{9a}{28}}
-\newlabel{sub@fig:board_top}{{a}{28}}
-\newlabel{fig:board_bottom}{{9b}{28}}
-\newlabel{sub@fig:board_bottom}{{b}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Custom control board v.2, key components are placed at follows: 1 -- xMega, 2 -- STM, 3\nobreakspace  {}--\nobreakspace  {}switching power supply, 4 -- socket for XBee, 5 -- data logging MCU.\relax }}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces feasibility algorithm.\relax }}{29}}
-\newlabel{fig:feasibility_algorithm}{{10}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}MPC implementation}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Hardware in the loop}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Experiments}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Photo of the experiment\relax }}{31}}
-\newlabel{fig:move_blocking}{{11}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The final optimization function with two variables\relax }}{24}}
+\newlabel{fig:barrier_function_3D}{{7}{24}}
+\newlabel{eq:gradient_descend}{{50}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Feasibility algorithm}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces feasibility algorithm.\relax }}{25}}
+\newlabel{fig:feasibility_algorithm}{{8}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Implementation of the gradient descend}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Move Blocking}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Move blocking implementation}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Move blocking algorithm in one axis\relax }}{27}}
+\newlabel{fig:move_blocking}{{9}{27}}
+\newlabel{eq:moveblocking_example}{{52}{28}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Simulations and Hardware}{28}}
+\citation{tomas}
+\citation{tomas}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}The Environment module}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}The UAV module}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}UAV custom board}{29}}
+\newlabel{sec:custom_board}{{9.3}{29}}
+\newlabel{fig:Cutom_board}{{\caption@xref {fig:Cutom_board}{ on input line 1013}}{30}}
+\newlabel{fig:board_top}{{10a}{30}}
+\newlabel{sub@fig:board_top}{{a}{30}}
+\newlabel{fig:board_bottom}{{10b}{30}}
+\newlabel{sub@fig:board_bottom}{{b}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Custom control board v.2, key components are placed at follows: 1 -- xMega, 2 -- STM, 3\nobreakspace  {}--\nobreakspace  {}switching power supply, 4 -- socket for XBee, 5 -- data logging MCU.\relax }}{30}}
+\citation{whycon_icar}
+\citation{whycon_jint}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Block diagram of information ow between tasks of xMega and STM MCUs.\relax }}{31}}
+\newlabel{fig:feasibility_algorithm}{{11}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Obstacles detection}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}MPC hardware implementation}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Hardware in the loop}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Experiments}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Photo of the experiment.\relax }}{33}}
+\newlabel{fig:move_blocking}{{12}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Stabilization}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Obstacle avoidance}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Data from the stabilization experiment\relax }}{34}}
+\newlabel{fig:stabilization}{{13}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {11}Conclusion}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Obstacle avoidance experiment\relax }}{35}}
+\newlabel{fig:avoidance_experiment}{{14}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Future work}{35}}

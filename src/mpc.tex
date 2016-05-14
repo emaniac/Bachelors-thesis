@@ -56,9 +56,13 @@
 
 \begin{document}
 
--- 2 positions in convex space -> all trajectory
 -- změřit poloměr helikoptéry
 -- algoritmus setpointu
+dopsat:
+-- kamerový systém
+-- regulatory vysilackou
+-- fotka kvadrokoptéry
+-- PCA
 
 
 \section{Introduction}
@@ -66,18 +70,28 @@ Unmanned aerial vehicles (UAV) have become very popular in last few years. It is
 
 Quadcopters body is simple compared with classical helicopter. It has rigid body and four propellers with a fixed pitch angles. 
 
-Many outdoor quadcopters possess global position system (GPS). This allows better control of the aircraft, such as position hold. Quadcopters are usually directly controlled by people, but in many applications an ability of autonomous flight is welcomed. For example if the UAV is too far from the operator, it can return to the takeoff place using GPS and even lend. This mechanism has been developed by the company DJI. 
+Many quadcopters possess global position system (GPS). This allows better outdoor control of the aircraft, such as position hold. Quadcopters are usually directly controlled by people, but in many applications an ability of autonomous flight is welcomed. For example if the UAV is too far from the operator, it can return to the takeoff place using GPS and even lend. This mechanism has been developed by the company DJI. 
 
 A system Vicon, using outside cameras, has been developed for more precise localization. This localization uses wireless communication between the on the ground computer and the UAV. The UAV's controller is usually also implemented in the on the ground computer, because of the computational demands. Because of this, UAV can't fly outside the laboratory. 
 
-A demand for on board controller, working outside the lab, has 
+There has been a demand for on on board controller, working outside the lab that depends only on the on board computer and sensors. Some high level unit plan trajectories for one or multiple UAV's. For example for movie shooting, just trajectory is given by this unit. It is not designed to work with a specific UAV model. The MPC follows this trajectory and if there is and obstacle in the way, it prevents collision.
 
-For indoor localization,
 
 \subsection{Problem statement}
-The task of this thesis is to design and implement a model predictive controller capable of precise trajectory following and obstacle avoidance. The trajectory will be given by higher level planning unit and the UAV will follow it, unless an obstacles appear. In this case, the MPC automatically avoids them. This is useful for swarms of UAVs and other trajectory planning algorithms, which don't have to worry about the actual control of the real UAV and avoiding unexpected obstacles.
+The task of this thesis is to design and implement a model predictive controller capable of precise trajectory following and obstacle avoidance. The trajectory will be given by higher level planning unit and the UAV will follow it, unless obstacles appear. In this case, the MPC automatically avoids them. This is useful for swarms of UAVs and other trajectory planning algorithms, which don't have to worry about the actual control of the particular UAV and avoiding unexpected obstacles. The input actions will be found as a mathematical optimization of linearly constrained quadratic function. 
 
-The UAV will be fully autonomous with the localization, computing and obstacle detection happening solely on board. This allows the UAV to work outside laboratories.
+The UAV will be fully autonomous with the localization, obstacle detection and computing happening solely on board. This allows the UAV to work outside laboratory conditions. The avoidance system will be as robust as possible depending only on optimization of an objective function.
+
+The goal of this thesis is not to develop an obstacle detection system using computer vision. An already developed system will be used for detecting circular markers, that will represent obstacles.
+
+\subsection{Previous work}
+Since 2011, the laboratory of Intelligent and Mobile Robotics(IMR) group at FEE CTU has been working with UAVs. The early development has been in simulations of swarms and formations. Later, a hardware platforms have started to be developed. 
+
+Tomáš Báča has developed such a hardware platform\cite{tomas}, described in the Sec. \ref{sec:custom_board}. This platform has been used for the experiments. He has also developed a MPC, capable of following a trajectory, but not an obstacle avoidance. For obstacle avoidance different approaches have to be used mainly in the mathematical optimization part.
+
+For the localization of the UAV, a sensor px4flow \cite{endrych2014} has been used. This sensor allowed to measure speed and, combined with a previously implemented state observer\cite{tomas}, allowed position measurements. 
+
+A system WhyCon\cite{whycon_icar}\cite{whycon_jint} is used for obstacle detection. It allows to detect multiple circular markers used in the experiments to represent obstacles.
 
 \section{UAV dynamics}
 For understanding the UAV's controller, it is important to understand the physical properties of the UAV. The UAV has 6 degrees of freedom. It has the position $x, y, z$, pitch($\theta$) , roll ($\psi$) and yaw($\phi$). The UAV is already equipped with the KK2 board providing basic stabilization. The inputs, that are used in this thesis are roll and pitch rotation references. After linearisation at the equilibrium at the horizontal position, with rotations close to the equilibrium, it can be said, that $\psi \sim \ddot{x}$ and $\theta \sim -\ddot{y}$, which are the accelerations in each axis. Using this controller, we get a time-invariant, linear system. The continuous transfer diagram is showed in the Fig. \ref{fig:LTI}
@@ -137,9 +151,15 @@ y^{(W)} = y^{(U)}+\Delta y	\\
 \ddot{y}^{(W)} = \ddot{y}^{(U)}+\Delta \ddot{y}.	\\
 \end{split}
 \end{equation}
-In the following text, the world coordination system W will be used unless stated otherwise. The UAV has it's own proportions. However, it is complicated to compute with the whole UAV body. It is much easier to proximate the UAV's body by a single mass point in it's center. The orientation of the UAV is constant and will not be taken into account. This way, the position ot the UAV can be described by two coordinates. 
+In the following text, the world coordination system W will be used unless stated otherwise. The UAV has it's own proportions. However, it is complicated to compute with the whole UAV body. It is much easier to proximate the UAV's body by a single mass point in it's center. The orientation of the UAV is constant and will not be taken into account. This way, the position of the UAV can be described by two coordinates. 
 
 The altitude of the UAV is controlled separately. There are several reasons to do that. The first one is, that many applications treat the altitude differently and enforce constant altitude for long periods of time. For example, in building interiors, the altitude is most of the time constant. The desired trajectory is also usually given in 2D and the altitude is described separately. The second reason is, as mentioned above, MPC is very demanding on computing time. To save computational capacity, standard PID controller can be used instead of MPC for controlling the altitude. The altitude PID controller has already been implemented \cite{tomas} and it is not a part of this thesis. 
+
+\subsection{State observer}
+MPC is very sensitive to noise and errors. Wrong initial condition can result in a bad prediction because of the double integration of acceleration into position. To work properly, the MPC requires very accurate initial condition. These are position, speed and acceleration in both axes. A Kalman estimator has been already implemented \cite{tomas} to estimate states of the UAV including disturbances of the acceleration. The inputs of state observer are the system's input action and measured velocity by a camera sensor.
+
+%% Hovd, Morten. "A brief introduction to Model Predictive Control." URL= http://www. itk. ntnu. no/fag/TTK4135/viktig/MPCkompendium% 20HOvd. pdf (2004).
+
 
 \subsection{One axis model}
 % picture of UAV
@@ -173,7 +193,7 @@ MPC is an advanced regulator. It uses prediction of future states of the system 
 
 The MPC needs to know the system's state space model, initial condition and, unlike other controllers, a sequence of desired future states. A great advantage of MPC is applying large variety of constraints, which can be useful for example in the regulation of chemical processes. On the other hand, MPC is sensitive to the model inaccuracy and to sensory noise. Output of the MPC is not only the desired input action for the next time step, but also predicted input actions and predicted behavior of the system in the whole prediction horizon for the T following time steps. This can be also very useful. Unlike standard controllers like PID, MPC can adjust the input action based on future demands.
 
-MPC controller for following desired trajectory has been already designed \cite{tom} and the goal of this thesis is to extend it for obstacle avoidance by using linear constrained quadratic optimization. The obstacles are not previously known and they can move. 
+MPC controller for following desired trajectory has been already designed \cite{tomas} and the goal of this thesis is to extend it for obstacle avoidance by using linearly constrained quadratic optimization. The obstacles are not previously known and they can move. 
 
 -- designed to be robust
 
@@ -211,10 +231,6 @@ By connecting these 2 systems, we get the following state space matrices of the 
 \end{equation}
 
 
-\subsection{State observer}
-As mentioned in introduction, MPC is very sensitive to noise and errors. Wrong initial condition can result in a bad prediction because of the double integration of acceleration into position. To work properly, the MPC requires very accurate initial condition. These are position, speed and acceleration in both axes. A Kalman estimator has been already implemented \cite{tom} to estimate states of the UAV including disturbances of the acceleration.
-
-%% Hovd, Morten. "A brief introduction to Model Predictive Control." URL= http://www. itk. ntnu. no/fag/TTK4135/viktig/MPCkompendium% 20HOvd. pdf (2004).
 
 
 
@@ -293,7 +309,7 @@ Using new notation, this equation can be rewritten in a simpler form as
 \textbf{\underline{x}} = \textbf{\^A}\textbf{x}_{[0]} + \textbf{\^B}\uvec.
 \end{equation}
 
-\section{Problem statement}
+\section{MPC implementation}
 As mentioned in a section ???, MPC uses a quadratic optimization problem. Let's first solve the problem, where obstacles are not involved. 
 \subsection{Trajectory}
 For MPC to compute input actions, there must be given a desired trajectory $\textbf{\underline{x}}_d = 
@@ -302,7 +318,7 @@ For MPC to compute input actions, there must be given a desired trajectory $\tex
 \begin{equation}
 d = \sqrt{(x_{d,[t]}-x_{d,[t+1]})^2+ (y_{d,[t]}- y_{d,[t+1]})^2}.
 \end{equation} 
-The same can be applied for acceleration. Therefore, the velocity and acceleration are demanded in the sequence of desired positions, rather than the desired states. The desired velocity and acceleration are than ignored and it can hold any value, for example 0. The $\textbf{x}_{d,[t]}$ than takes form of $\textbf{x}_{d,[t]} = (x_{d,[t]}, 0, 0, y_{d,[t]}, 0, 0)^T$. When creating the desired trajectory, one should always keep in mind, that the desired positions hold also information about velocity and acceleration. 
+The same can be applied for acceleration. Therefore, the velocity and acceleration are demanded in the sequence of desired positions, rather than the desired states. The desired velocity and acceleration are than ignored and it can hold any value, for example 0. The $\textbf{x}_{d,[t]}$ than takes form of $\textbf{x}_{d,[t]} = (x_{d,[t]}, 0, 0, y_{d,[t]}, 0, 0)^T$. When creating the desired trajectory, one should always keep in mind, that the desired positions hold also information about velocity and acceleration.
 
 \subsection{Objective function}
 As in many other areas of engineering, the problem can be solved in two independent steps. Creating an objective function and than minimize it. The objective function's (sometimes called cost function) value describes, how good is the particular solution from it's domain. In this case the solution takes form of a vector $\underline{\textbf{u}}$, which can be directly transformed into predicted trajectory. The lower is the value of the objective function, the better the particular solution is. The solution with the minimal objective function's value is called an optimal solution.
@@ -580,7 +596,7 @@ Similarly to the Eq. (\ref{eq:conv_proof_1_less_2}), the third line of the Eq. (
 It has been proven, that all $\uvec$, that obey the Eq. (\ref{eq:MPC_cond} c)reate a convex set. This means, that also the set $U_s$ is convex. Intersection of the convex set $J_s$ and $U_s$ is a convex set making the function $\mathrm{J}(\underline{\textbf{u}})$ with the domain as polytope defined $\textbf{A}_c \uvec \leq \textbf{B}_c$ is a convex function.
 
 \section{Obstacles}
-Through all this thesis, obstacles will be represented in 2D only by circles. These representations have 3 parameters: position $x_{obs}$, position $y_{obs}$ and diameter $r_{obs}$. Of course, obstacles can have various shapes, but the final allowed space will be very simplified and this is a good representation of for example people. Because the MPC runs constantly in a loop and reacts to the changing environment, it also works great with moving objects. Until now, the UAV body has been approximated with one mass point without considering the real size of the UAV. It would be difficult to calculate, whether the UAV's body has collided in the particular position or not. There is an algorithm using Minkovski Sum. Instead computing with the real size of the UAV, the representation of all obstacles will change according to the UAV's size.
+Through all this thesis, obstacles will be represented in 2D only by circles. These representations have 3 parameters: position $x_{obs}$, position $y_{obs}$ and diameter $r_{obs}$. Of course, obstacles can have various shapes, but the final allowed space will have to be very simplified and this is a good representation of for example people. Because the MPC runs constantly in a loop and reacts to the changing environment, it also works great with moving objects. Until now, the UAV body has been approximated with one mass point without considering the real size of the UAV. It would be difficult to calculate, whether the UAV's body has collided in the particular position or not. There is an algorithm using Minkovski Sum. Instead computing with the real size of the UAV, the representation of all obstacles will change according to the UAV's size.
 Let's create a circle with the center in the UAV's center, that will completely wrap the UAV. This circle will have the smallest possible diameter $R_{UAV}$ as shown in the figure \ref{fig:UAV_dimensions}. 
 
 \begin{figure}[h]
@@ -612,8 +628,8 @@ The approach for creating a convex allowed space is restricting any position 'be
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{fig/polorovina.png} 
-\caption{half plane, --template of the final picture}
+\includegraphics[width=0.8\textwidth]{fig/half_plain_making.eps} 
+\caption{Creating prohibited half plain}
 \label{fig:half_plain}
 \end{center}
 \end{figure}
@@ -771,7 +787,7 @@ Until now, we have been describing the case with only one obstacle. As described
 \end{equation}
 Now the task is fully defined and can be given to a LCQP solver to find the optimal $\underline{\textbf{u}}$. 
 
-\section{solving constrained LCQP}
+\section{Solving constrained Quadratic Programming}
 The MPC has 2 different parts. The first one is creating the objective function $\macJ$ by matrices $\textbf{\^H}$ and $\textbf{\^c}$ and creating the constraining matrices $\textbf{A}_c$ and $\textbf{B}_c$. This part has been described in the previous sections. The second part is solving this problem defined in the Eq. (\ref{eq:qmpc_main_quadratic_form}). We have already talked about solving this problem unconstrained using inverse matrix. This problem can't be solved analytically and there are only iterative methods. This means, that the solution is usually optimal, but close to optimal. One more property of the solver is desirable. Instead of finding strictly feasible solution(an $\uvec$, that lies on at least one constraining hyper plain), a solution with some margin is better. Strictly feasible solution means actually touching the obstacle. The MPC finds the closest avoidance trajectory, where at least one state prediction is equal to the position constraint. If we wanted to have some kind of safe distance from the obstacle, there are 2 solutions. One is simply making $R_{UAV}$ bigger than the real UAV body and taking the strictly feasible solution. This solution has a one big disadvantage. The mathematical model will still touch the obstacle, even that the UAV body is actually smaller and will fly in a bigger distance. Because of the sensory noise, the measured relative position of the obstacle is continuously changing. At the time, when UAV model touches the obstacle, the measurement of the obstacle can change a little bit closer to the UAV and suddenly the UAV is mathematically inside the obstacle. The initial condition does not satisfy the constraints any more. The constraints are not defined for the initial condition, but from the first time step, because initial condition does not depend on $\uvec$. The optimization algorithm would try to find an input action to escape the constraint in the first time step. First of all, the thrust would have to be enormous, but mainly, the position is a second integration of the input and each integration takes one time step. This means, that the input action inflates the position first in two time steps. Even a small amount of noise can result in a task formulation, that has no solution. This is of course not applicable. Making the final solution $\uvec$ further from the constraining hyper plains solves this problem well. The UAV will fly with some safe distance from the obstacle and if the obstacle changes it's position as a result of the sensory noise, the initial condition will still satisfy the position constraints. This is the solution, that will be used. For finding this kind of solution, a special optimization method has to be used. Because of the convexity of the function and the convexity of the constraints, the solution is either a global minimum of the function $\macJ$, or lies on the constraining border.
 
 
@@ -846,12 +862,22 @@ has been chosen, where $k_g$ is a constant. It has been experimentally chosen to
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1.1\textwidth]{fig/barrier_function2.eps}
-\caption{Barrier function}
+\caption{Barrier function with one variable}
 \label{fig:barrier_function}
 \end{center}
 \end{figure}
 
 The figure \ref{fig:barrier_function} shows, how the barrier method works in one dimension. It moves the location of the strictly feasible local minimum away from the prohibited space to a a new local minimum. This is the desired property, because the strictly feasible solution can result in a bad behavior as mentioned in the beginning of this section. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.1\textwidth]{fig/LQCP2D.png}
+\caption{The final optimization function with two variables}
+\label{fig:barrier_function_3D}
+\end{center}
+\end{figure}
+
+The Fig. \ref{fig:barrier_function_3D} shows the function $\macJ + \macg$ with the 2 dimensional domain. The real optimizing function is in very high dimension and can not be graphed. Principal component analysis(PCA), which is an algorithm for reducing space dimensions by projecting objects to a created basis can not be used, because it will highly deform the space.
 
 \subsection{Gradient descent}
 The optimization problem will be solved with slightly modified standard gradient descent. This is a very used algorithm for optimizing functions. It has two big requirements. One is, that the function must be differentiable. This has been satisfied by choosing quadratic function as the objective function and hyperbola as the barrier function. The second requirement is, that the function must be convex for Using the barrier method, instead of the function $\macJ$, the gradient descent optimizes the function $\macf = \macJ + \macg$ where $\macg$ is the barrier function from the Eq. (\ref{eq:barrier_function}). 
@@ -978,9 +1004,10 @@ First the MPC problem definition, which creates the constraining matrices $\text
 
 --- obrazek ---
 
-\subsection{UAV custom board}
 
-The UAV custom board \cite{tom} as shown in the figure \ref{fig:Cutom_board}, is a computer with very limited computational power compared to matlab. This board has been designed \cite{tom} especially for MPC control and communication. This board is whole programmed in the language C. It has two computational units: xMega and STM. For debugging and data logging is a socket for XBee and logging data to micro SD card. This board sticks to the philosophy of distributed computing.
+\subsection{UAV custom board}
+\label{sec:custom_board}
+The UAV custom board \cite{tomas} as shown in the figure \ref{fig:Cutom_board}, is a computer with very limited computational power compared to matlab. This board has been designed \cite{tomas} especially for MPC control and communication. This board is whole programmed in the language C. It has two computational units: xMega and STM. For debugging and data logging is a socket for XBee and logging data to micro SD card. This board sticks to the philosophy of distributed computing.
 
 \begin{figure}[h]
 \label{fig:Cutom_board}
@@ -1048,13 +1075,17 @@ Each task uses a third of the CPU time and less than a third of RAM ----xTaskCre
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.9\textwidth]{fig/STM_xMega.eps}
-\caption{feasibility algorithm.}
+\caption{Block diagram of information 
+ow between tasks of xMega and STM MCUs.}
 \label{fig:feasibility_algorithm}
 \end{figure}
 
-\subsection{MPC implementation}
+\subsection{Obstacles detection}
+A system WhyCon\cite{whycon_icar}\cite{whycon_jint} is used for obstacle detection. It uses 3 cameras Mobius Actioncam, two pointing to the sides and one forwards. This allows obstacle detection at 270$^\circ$. Each camera has the capability of recording 1080p, but for faster performance the video is shoot in 720p and processed 480p. The system is capable of precise detecting of multiple circular markers. The 3 axis positions of these markers are then sent by UART to the custom board, where the xMega receives the information. The image processing runs in a loop on a computational unit nVidia Jetson TK1.
 
-The exact algorithm, as written in matlab, has been rewritten to the C code. This has been the most time demanding part of this thesis. The programmed code uses a CMatrixLib library, that allows simple matrix and vector operations. This library has been extended by more functions for the purposes of this thesis. Because the RAM is very limited, the matrices have to be divided into constant matrices, that are stored in ROM, and the changing matrices, that have allocated memory in RAM.
+\subsection{MPC hardware implementation}
+
+The exact algorithm, as written in matlab, has been rewritten to the C code. This has been the most time demanding part of this thesis. The programmed code uses a CMatrixLib library, that allows simple matrix and vector operations. This library has been extended by more functions for the purposes of this thesis. Because the RAM is very limited, the matrices have to be divided into constant matrices, that are stored in ROM, and the changing matrices, which have allocated memory in RAM.
 
 The constant matrices depend only on the system model and move blocking algorithm. These matrices are: $\textbf{\^A}_x$, $\textbf{\^A}_y$, $\textbf{\^B}_x$, $\textbf{\^B}_y$, $(\textbf{\^Q}\textbf{\^B})^T, \textbf{\^A}$ and $\textbf{\^H}$. They had been adapted by the move blocking algorithm, generated in matlab and stored in the ROM memory of the STM unit. 
 
@@ -1064,36 +1095,56 @@ The input action can not be infinite and some method of constraint has to be app
 
 
 \subsection{Hardware in the loop}
-This is a method of testing embedded hardware. The board is connected to a computer. The inputs are provided by the computer and outputs are also sent to the computer. The board is in the same situation, as if it would be flying. This has been simulated in two experiments. 
+This is a method of testing embedded hardware. The custom board is connected to a computer instead of UAV's body. The board's inputs are provided by the computer and outputs are sent back. The board is in the same situation, as if it would be flying.  This has been simulated in two experiments. 
 
-The first one was connecting the board to the computer using the putty terminal. The inputs have been sent through the terminal and outputs were received. These outputs were compared with the matlab simulations, to check if they match. The UAV has been tested in various situations, such as different initial conditions, desired trajectories and obstacle positions. This allowed to test and debug the various segments of the code, as well as the MPC algorithm as whole. This method also allowed to test xMega as well as STM.
+The first one was connecting the board to the computer using the putty terminal. The inputs have been sent through the terminal and outputs were received. These outputs were compared with the matlab simulations, to check if they match. The UAV has been tested in various situations, such as different initial conditions, desired trajectories and obstacle positions. This allowed to test and debug the various segments of the code, as well as the MPC algorithm as whole. This method also allowed to test xMega as well as STM. After successfully finishing this testing, it was sure, that the implemented algorithm behaves exactly in the same way as the simulation.
 
-The second experiment was actually connecting the board to the UAV, without the ability of controlling the motors. It received inputs from real sensors, such as velocity and obstacle positions. The board was connected to matlab using wireless Xbee. The communication protocol has been extended for the important information to be transferred. A matlab visualization allowed to see the predicted trajectory in real time without the need to be connected to the UAV with a cable. 
+The second experiment was connecting the board to the UAV, without the ability of controlling the motors. It received inputs from the UAV's sensors, such as velocity and obstacle positions. The board was connected to matlab using wireless Xbee. The Xbee communication protocol has been extended for the important information to be transferred. A matlab visualization allowed to see the predicted trajectory in real time without the need to be connected to the UAV with a cable. This allowed testing the algorithm in real situations without worrying of damaging the UAV. It also allowed testing communication with the on-board sensors. The frequency of the MPC loop has been measured close to 20\jed{Hz}. This is an sufficient regulator frequency.
 
-After testing in various situations and behaving correctly, it was time to do an experiment with real flying UAV.
+After testing in various situations and behaving correctly, it was time to do a real flight experiment.
 
-\subsection{Experiments}
-
-Two experiments have been realized. Hovering at a steady position without obstacles and avoidance with one obstacle.
+\section{Experiments}
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.5\textwidth]{fig/experiment_photo}
-\caption{Photo of the experiment}
+\caption{Photo of the experiment.}
 \label{fig:move_blocking}
 \end{center}
 \end{figure}
 
+The implemented MPC controller has been verified by a real world experiments. Simulations, that have been done, differ from the real world experiments mainly by the absence of sensory noise. Because of the construction of the UAV with 4 propellers on sides, most collisions can be dangerous not only for the UAV, but for the operator as well. That is the reason, why the operator has to have the access to take over the control any time during these experiments. During the described experiment this possibility has not been used and the presented data are solely while the MPC was in control.
+
+\subsection{Stabilization}
+The first experiment was to test the stability and settle time of the MPC. The position setpoint was set to the origin of the world coordinate system. The task for the UAV was to follow this setpoint while the UAV was physically pushed by the operator. This tested reactions of the controller to an outside disturbances.
 
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1.2\textwidth]{fig/balancing.eps}
+\caption{Data from the stabilization experiment}
+\label{fig:stabilization}
+\end{figure}
 
+The Fig. \ref{fig:stabilization} shows the position, speed and input action during the stabilization experiment. During the experiment, the UAV has been three times pushed in the positive direction of the elevator axis. The UAV returned then to the original position. The aileron position stayed away from the setpoint within 11\jed{cm}, which is a good performance considering the size of the UAV's body. At the elevator axis it is 20\jed{cm} if not considering the disturbances.
 
+\subsection{Obstacle avoidance}
+The obstacle avoidance system has been tested. The obstacle was represented by a blob - recognizable pattern by the camera. This was especially risky experiment, because the UAV had to get close to the obstacle. The maximum speed was set to 0.2\jed{ms^{-1}} for the operator to have enough time to take control of the UAV in case incorrect behavior. The UAV was given a setpoint 4\jed{m} in the front. The obstacle was in the middle between the UAV's initial position and the setpoint and did not move. The obstacle was given a predefined diameter of 0.5\jed{m}. The trajectory was being created on-board. This way the algorithm of creating trajectory was tested as well. The task was to avoid the obstacle and arrive to the setpoint position.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/avoidance_experiment.eps}
+\caption{Obstacle avoidance experiment}
+\label{fig:avoidance_experiment}
+\end{figure}
 
+The fig. \ref{fig:avoidance_experiment} shows the UAV's obstacle avoidance trajectory. Around the obstacle is a red circle of 0.5\jed{m}, which is the minimal distance allowed from the obstacle. The figure also shows, that there is a safe distance from the obstacle, which was enforced by the barrier function. The UAV also finishes on the setpoint and stabilizes there.
 
+\section{Conclusion}
+In this thesis a Model predictive controller for UAV has been developed. It is capable of trajectory or setpoint following and obstacle avoidance. The MPC algorithm and linearly constrained quadratic programming solver has been designed and tested by matlab simulations. The solution was then implemented on embedded hardware and tested again. Real world experiments have been successfully \textcolor{red}{conducted}. The UAV Was capable of following trajectory while detecting and avoiding an obstacle. The entire assignment of this thesis has been successfully fulfilled.
 
-
-
+\subsection{Future work}
+Although simulations and experiments have been successfully executed, there is still a room for future improvements. The greatest limitation of the introduced algorithm is keeping the convexity of the mathematical optimization. If this condition was lost, the optimization problem would have local minimums, but the designed prediction space could be much more complex, allowing the UAV to work with more complicated obstacles. This would allow UAV to fly faster and safer.
 
 
 
