@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  16 MAY 2016 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.14)  17 MAY 2016 01:36
 entering extended mode
 **./mpc.tex
 (mpc.tex
@@ -891,6 +891,9 @@ LaTeX Warning: Label `eq:state_space_model_simple' multiply defined.
 LaTeX Warning: Label `Lagrangian' multiply defined.
 
 
+LaTeX Warning: Label `fig:blob' multiply defined.
+
+
 LaTeX Warning: Label `fig:feasibility_algorithm' multiply defined.
 
 
@@ -950,71 +953,89 @@ LaTeX Info: Redefining \nameref on input line 73.
 \@outlinefile=\write4
 \openout4 = `mpc.out'.
 
- [1
+ <fig/phantom.jpg, id=191, 1426.128pt x 629.552pt>
+File: fig/phantom.jpg Graphic file (type jpg)
+
+<use fig/phantom.jpg>
+Package pdftex.def Info: fig/phantom.jpg used on input line 92.
+(pdftex.def)             Requested size: 360.0pt x 158.915pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
 
 {C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `tomas' on page 2 undefined on input line 104.
+LaTeX Warning: Citation `tomas' on page 2 undefined on input line 105.
 
 
-LaTeX Warning: Citation `endrych2014' on page 2 undefined on input line 106.
+LaTeX Warning: Citation `endrych2014' on page 2 undefined on input line 107.
 
 
-LaTeX Warning: Citation `tomas' on page 2 undefined on input line 106.
+LaTeX Warning: Citation `tomas' on page 2 undefined on input line 107.
 
 
-LaTeX Warning: Citation `whycon_icar' on page 2 undefined on input line 108.
+LaTeX Warning: Citation `whycon_icar' on page 2 undefined on input line 109.
 
 
-LaTeX Warning: Citation `whycon_jint' on page 2 undefined on input line 108.
+LaTeX Warning: Citation `whycon_jint' on page 2 undefined on input line 109.
 
 
-LaTeX Warning: Citation `weiss2011intuitive' on page 2 undefined on input line 
-113.
+Package caption Warning: \label without proper reference on input line 1035.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Citation `gupta2015obstacle' on page 2 undefined on input line 1
-15.
+LaTeX Warning: Reference `fig:blob' on page 2 undefined on input line 109.
+
+[2 <./fig/phantom.jpg>]
+
+LaTeX Warning: Citation `weiss2011intuitive' on page 3 undefined on input line 
+114.
 
 
-LaTeX Warning: Citation `budiyanto2015uav' on page 2 undefined on input line 11
-7.
+LaTeX Warning: Citation `gupta2015obstacle' on page 3 undefined on input line 1
+16.
 
 
-LaTeX Warning: Citation `tijmons2016obstacle' on page 2 undefined on input line
- 119.
-
-[2] [3]
-
-LaTeX Warning: Citation `tomas' on page 4 undefined on input line 185.
+LaTeX Warning: Citation `budiyanto2015uav' on page 3 undefined on input line 11
+8.
 
 
-LaTeX Warning: Citation `tomas' on page 4 undefined on input line 189.
+LaTeX Warning: Citation `tijmons2016obstacle' on page 3 undefined on input line
+ 120.
+
+[3]
+
+LaTeX Warning: Citation `tomas' on page 4 undefined on input line 183.
+
+
+LaTeX Warning: Citation `tomas' on page 4 undefined on input line 187.
 
 [4]
 
-LaTeX Warning: Citation `tomas' on page 5 undefined on input line 225.
+LaTeX Warning: Citation `tomas' on page 5 undefined on input line 194.
 
 [5]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 240.
+LaTeX Warning: Citation `tomas' on page 6 undefined on input line 225.
 
 [6] [7]
 
 LaTeX Warning: Citation `stein1970singular' on page 8 undefined on input line 3
-69.
+67.
 
 [8] [9]
 
 LaTeX Warning: Citation `zometa2012implementation' on page 10 undefined on inpu
-t line 467.
+t line 465.
 
 [10]
 
 LaTeX Warning: Citation `chong2013introduction' on page 11 undefined on input l
-ine 483.
+ine 481.
 
+[11]
 Package epstopdf Info: Source file: <fig/step_constrained_2.eps>
 (epstopdf)                    date: 2016-04-06 12:53:09
 (epstopdf)                    size: 45211 bytes
@@ -1024,16 +1045,16 @@ f>
 (epstopdf)                    size: 8924 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_constrained_2-eps-
 converted-to.pdf fig/step_constrained_2.eps>
-(epstopdf)             \includegraphics on input line 523.
+(epstopdf)             \includegraphics on input line 521.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_constrained_2-eps-converted-to.pdf, id=284, 380.42125pt x 310.15875pt
+<fig/step_constrained_2-eps-converted-to.pdf, id=295, 380.42125pt x 310.15875pt
 >
 File: fig/step_constrained_2-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/step_constrained_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_constrained_2-eps-converted-to.pdf used on in
-put line 523.
-(pdftex.def)             Requested size: 198.0011pt x 161.43492pt.
+put line 521.
+(pdftex.def)             Requested size: 180.0pt x 146.75902pt.
 Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    date: 2016-04-06 12:59:43
 (epstopdf)                    size: 45697 bytes
@@ -1043,47 +1064,43 @@ Package epstopdf Info: Source file: <fig/step_saturated_2.eps>
 (epstopdf)                    size: 7095 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/step_saturated_2-eps-co
 nverted-to.pdf fig/step_saturated_2.eps>
-(epstopdf)             \includegraphics on input line 528.
+(epstopdf)             \includegraphics on input line 526.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/step_saturated_2-eps-converted-to.pdf, id=285, 380.42125pt x 310.15875pt>
+<fig/step_saturated_2-eps-converted-to.pdf, id=296, 380.42125pt x 310.15875pt>
 File: fig/step_saturated_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/step_saturated_2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/step_saturated_2-eps-converted-to.pdf used on inpu
-t line 528.
-(pdftex.def)             Requested size: 198.0011pt x 161.43492pt.
+t line 526.
+(pdftex.def)             Requested size: 180.0pt x 146.75902pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 522--532
- [][][] 
- []
 
-[11]
-
-LaTeX Warning: Citation `saturation' on page 12 undefined on input line 535.
+LaTeX Warning: Citation `saturation' on page 12 undefined on input line 533.
 
 [12 <./fig/step_constrained_2-eps-converted-to.pdf> <./fig/step_saturated_2-eps
 -converted-to.pdf>]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 549.
+LaTeX Warning: Command \textless invalid in math mode on input line 547.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 549.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 547.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 549.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 547.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 549.
+LaTeX Warning: Command \textless invalid in math mode on input line 547.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 549.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 547.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 549.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 547.
 
+[13]
 Package epstopdf Info: Source file: <fig/convex_polytope.eps>
 (epstopdf)                    date: 2016-05-10 20:39:31
 (epstopdf)                    size: 1682671 bytes
@@ -1092,33 +1109,30 @@ Package epstopdf Info: Source file: <fig/convex_polytope.eps>
 (epstopdf)                    size: 15598 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/convex_polytope-eps-con
 verted-to.pdf fig/convex_polytope.eps>
-(epstopdf)             \includegraphics on input line 566.
+(epstopdf)             \includegraphics on input line 564.
 Package epstopdf Info: Output file is already uptodate.
-<fig/convex_polytope-eps-converted-to.pdf, id=314, 525.965pt x 287.0725pt>
+
+<fig/convex_polytope-eps-converted-to.pdf, id=325, 525.965pt x 287.0725pt>
 File: fig/convex_polytope-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/convex_polytope-eps-converted-to.pdf>
 Package pdftex.def Info: fig/convex_polytope-eps-converted-to.pdf used on input
- line 566.
+ line 564.
 (pdftex.def)             Requested size: 251.9989pt x 137.54355pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13]
-
-LaTeX Warning: Command \textless invalid in math mode on input line 575.
+LaTeX Warning: Command \textless invalid in math mode on input line 573.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 575.
+LaTeX Warning: Command \textless invalid in math mode on input line 573.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 575.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 573.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 575.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 573.
 
-[14 <./fig/convex_polytope-eps-converted-to.pdf>]
+[14 <./fig/convex_polytope-eps-converted-to.pdf>] [15]
 Package epstopdf Info: Source file: <fig/UAV_dimensions.eps>
 (epstopdf)                    date: 2016-05-10 20:36:34
 (epstopdf)                    size: 1693252 bytes
@@ -1127,27 +1141,22 @@ Package epstopdf Info: Source file: <fig/UAV_dimensions.eps>
 (epstopdf)                    size: 21050 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/UAV_dimensions-eps-conv
 erted-to.pdf fig/UAV_dimensions.eps>
-(epstopdf)             \includegraphics on input line 635.
+(epstopdf)             \includegraphics on input line 633.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/UAV_dimensions-eps-converted-to.pdf, id=340, 428.60126pt x 413.545pt>
+<fig/UAV_dimensions-eps-converted-to.pdf, id=351, 428.60126pt x 413.545pt>
 File: fig/UAV_dimensions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/UAV_dimensions-eps-converted-to.pdf>
 Package pdftex.def Info: fig/UAV_dimensions-eps-converted-to.pdf used on input 
-line 635.
+line 633.
 (pdftex.def)             Requested size: 172.79846pt x 166.72757pt.
 
-<fig/blob.png, id=341, 2007.5pt x 2007.5pt>
+<fig/blob.png, id=352, 2007.5pt x 2007.5pt>
 File: fig/blob.png Graphic file (type png)
  <use fig/blob.png>
-Package pdftex.def Info: fig/blob.png used on input line 641.
+Package pdftex.def Info: fig/blob.png used on input line 639.
 (pdftex.def)             Requested size: 172.79846pt x 172.79478pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15]
 Package epstopdf Info: Source file: <fig/perfect_collision_avoidance_arrow.eps>
 
 (epstopdf)                    date: 2016-05-15 15:43:32
@@ -1158,20 +1167,23 @@ converted-to.pdf>
 (epstopdf)                    size: 12457 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/perfect_collision_avoid
 ance_arrow-eps-converted-to.pdf fig/perfect_collision_avoidance_arrow.eps>
-(epstopdf)             \includegraphics on input line 660.
+(epstopdf)             \includegraphics on input line 658.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/perfect_collision_avoidance_arrow-eps-converted-to.pdf, id=351, 547.04375p
+<fig/perfect_collision_avoidance_arrow-eps-converted-to.pdf, id=354, 547.04375p
 t x 156.585pt>
 File: fig/perfect_collision_avoidance_arrow-eps-converted-to.pdf Graphic file (
 type pdf)
 
 <use fig/perfect_collision_avoidance_arrow-eps-converted-to.pdf>
 Package pdftex.def Info: fig/perfect_collision_avoidance_arrow-eps-converted-to
-.pdf used on input line 660.
+.pdf used on input line 658.
 (pdftex.def)             Requested size: 360.0pt x 103.04774pt.
- [16 <./fig/UAV_dimensions-eps-converted-to.pdf> <./fig/blob.png> <./fig/perfec
-t_collision_avoidance_arrow-eps-converted-to.pdf>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./fig/UAV_dimensions-eps-converted-to.pdf> <./fig/blob.png>]
 Package epstopdf Info: Source file: <fig/half_plain_making.eps>
 (epstopdf)                    date: 2016-05-14 17:07:28
 (epstopdf)                    size: 21593 bytes
@@ -1181,7 +1193,7 @@ Package epstopdf Info: Source file: <fig/half_plain_making.eps>
 (epstopdf)                    size: 4699 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/half_plain_making-eps-c
 onverted-to.pdf fig/half_plain_making.eps>
-(epstopdf)             \includegraphics on input line 676.
+(epstopdf)             \includegraphics on input line 674.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/half_plain_making-eps-converted-to.pdf, id=369, 419.5675pt x 241.90375pt>
@@ -1189,21 +1201,26 @@ File: fig/half_plain_making-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/half_plain_making-eps-converted-to.pdf>
 Package pdftex.def Info: fig/half_plain_making-eps-converted-to.pdf used on inp
-ut line 676.
+ut line 674.
 (pdftex.def)             Requested size: 360.0pt x 207.5607pt.
- [17 <./fig/half_plain_making-eps-converted-to.pdf>] [18] [19] [20]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./fig/perfect_collision_avoidance_arrow-eps-converted-to.pdf>] [18 <./fig/
+half_plain_making-eps-converted-to.pdf>] [19] [20]
 
 LaTeX Warning: Citation `schittkowski1983convergence' on page 21 undefined on i
-nput line 839.
+nput line 837.
 
 [21] [22]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 872.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 870.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 872.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 870.
 
 [23]
 Package epstopdf Info: Source file: <fig/barrier_function2.eps>
@@ -1215,21 +1232,21 @@ Package epstopdf Info: Source file: <fig/barrier_function2.eps>
 (epstopdf)                    size: 13975 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/barrier_function2-eps-c
 onverted-to.pdf fig/barrier_function2.eps>
-(epstopdf)             \includegraphics on input line 909.
+(epstopdf)             \includegraphics on input line 907.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/barrier_function2-eps-converted-to.pdf, id=437, 539.01375pt x 204.765pt>
+<fig/barrier_function2-eps-converted-to.pdf, id=441, 539.01375pt x 204.765pt>
 File: fig/barrier_function2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/barrier_function2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/barrier_function2-eps-converted-to.pdf used on inp
-ut line 909.
+ut line 907.
 (pdftex.def)             Requested size: 360.0pt x 136.76065pt.
 
-<fig/LQCP2D.png, id=439, 990.70125pt x 504.08325pt>
+<fig/LQCP2D.png, id=443, 990.70125pt x 504.08325pt>
 File: fig/LQCP2D.png Graphic file (type png)
  <use fig/LQCP2D.png>
-Package pdftex.def Info: fig/LQCP2D.png used on input line 918.
+Package pdftex.def Info: fig/LQCP2D.png used on input line 916.
 (pdftex.def)             Requested size: 360.0pt x 183.1697pt.
 
 
@@ -1245,16 +1262,16 @@ Package epstopdf Info: Source file: <fig/feasibility_paint.eps>
 (epstopdf)                    size: 12101 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/feasibility_paint-eps-c
 onverted-to.pdf fig/feasibility_paint.eps>
-(epstopdf)             \includegraphics on input line 960.
+(epstopdf)             \includegraphics on input line 958.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/feasibility_paint-eps-converted-to.pdf, id=461, 524.96124pt x 286.06876pt>
+<fig/feasibility_paint-eps-converted-to.pdf, id=465, 524.96124pt x 286.06876pt>
 File: fig/feasibility_paint-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/feasibility_paint-eps-converted-to.pdf>
 Package pdftex.def Info: fig/feasibility_paint-eps-converted-to.pdf used on inp
-ut line 960.
+ut line 958.
 (pdftex.def)             Requested size: 360.0pt x 196.18289pt.
- [26] [27 <./fig/feasibility_paint-eps-converted-to.pdf>]
+ [26] [27 <./fig/feasibility_paint-eps-converted-to.pdf>] [28]
 Package epstopdf Info: Source file: <fig/move_blocking_u.eps>
 (epstopdf)                    date: 2016-05-15 22:16:30
 (epstopdf)                    size: 1576209 bytes
@@ -1263,56 +1280,69 @@ Package epstopdf Info: Source file: <fig/move_blocking_u.eps>
 (epstopdf)                    size: 15047 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/move_blocking_u-eps-con
 verted-to.pdf fig/move_blocking_u.eps>
-(epstopdf)             \includegraphics on input line 988.
+(epstopdf)             \includegraphics on input line 986.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/move_blocking_u-eps-converted-to.pdf, id=483, 590.205pt x 220.825pt>
+<fig/move_blocking_u-eps-converted-to.pdf, id=492, 590.205pt x 220.825pt>
 File: fig/move_blocking_u-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/move_blocking_u-eps-converted-to.pdf>
 Package pdftex.def Info: fig/move_blocking_u-eps-converted-to.pdf used on input
- line 988.
+ line 986.
 (pdftex.def)             Requested size: 360.0pt x 134.6963pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28]
-Overfull \hbox (6.67014pt too wide) in paragraph at lines 1022--1023
-[]\OT1/cmr/m/n/10.95 In the fig-ure []14[] have been used pre-dic-tion times $1
+Overfull \hbox (6.67014pt too wide) in paragraph at lines 1020--1021
+[]\OT1/cmr/m/n/10.95 In the fig-ure []17[] have been used pre-dic-tion times $1
 \OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; :::; \OT1/cmr/m
 /n/10.95 9\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 10\OML/cmm/m/it/10.95 ; \OT1
 /cmr/m/n/10.95 20\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 30\OML/cmm/m/it/10.95
  ; :::; \OT1/cmr/m/n/10.95 100$.
  []
 
-[29 <./fig/move_blocking_u-eps-converted-to.pdf>] [30]
+[29 <./fig/move_blocking_u-eps-converted-to.pdf>]
+<fig/dron_up.jpg, id=505, 3476.99pt x 2810.5pt>
+File: fig/dron_up.jpg Graphic file (type jpg)
+ <use fig/dron_up.jpg>
+Package pdftex.def Info: fig/dron_up.jpg used on input line 1030.
+(pdftex.def)             Requested size: 172.79846pt x 139.67554pt.
 
-LaTeX Warning: Citation `tomas' on page 31 undefined on input line 1055.
+<fig/dron_strana.jpg, id=506, 5203.44pt x 3468.96pt>
+File: fig/dron_strana.jpg Graphic file (type jpg)
+ <use fig/dron_strana.jpg>
+Package pdftex.def Info: fig/dron_strana.jpg used on input line 1034.
+(pdftex.def)             Requested size: 172.79846pt x 115.18002pt.
+
+[30 <./fig/dron_up.jpg> <./fig/dron_strana.jpg>]
+
+LaTeX Warning: Citation `tomas' on page 31 undefined on input line 1066.
 
 
-Package caption Warning: \label without proper reference on input line 1071.
+Package caption Warning: \label without proper reference on input line 1069.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:Cutom_board' on page 31 undefined on input line 1
-055.
+066.
 
 
-LaTeX Warning: Citation `tomas' on page 31 undefined on input line 1055.
+LaTeX Warning: Citation `tomas' on page 31 undefined on input line 1066.
 
-<fig/board1.jpg, id=506, 2055.68pt x 1659.19875pt>
+<fig/board1.jpg, id=513, 2055.68pt x 1659.19875pt>
 File: fig/board1.jpg Graphic file (type jpg)
  <use fig/board1.jpg>
-Package pdftex.def Info: fig/board1.jpg used on input line 1063.
+Package pdftex.def Info: fig/board1.jpg used on input line 1074.
 (pdftex.def)             Requested size: 185.39978pt x 149.62524pt.
 
-<fig/board2.jpg, id=507, 2320.67pt x 2039.62pt>
+<fig/board2.jpg, id=514, 2320.67pt x 2039.62pt>
 File: fig/board2.jpg Graphic file (type jpg)
  <use fig/board2.jpg>
-Package pdftex.def Info: fig/board2.jpg used on input line 1089.
+Package pdftex.def Info: fig/board2.jpg used on input line 1100.
 (pdftex.def)             Requested size: 174.60022pt x 153.43173pt.
- [31 <./fig/board1.jpg> <./fig/board2.jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31]
 Package epstopdf Info: Source file: <fig/STM_xMega.eps>
 (epstopdf)                    date: 2016-05-12 21:13:57
 (epstopdf)                    size: 12253117 bytes
@@ -1321,31 +1351,41 @@ Package epstopdf Info: Source file: <fig/STM_xMega.eps>
 (epstopdf)                    size: 90893 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/STM_xMega-eps-converted
 -to.pdf fig/STM_xMega.eps>
-(epstopdf)             \includegraphics on input line 1122.
+(epstopdf)             \includegraphics on input line 1133.
 Package epstopdf Info: Output file is already uptodate.
-
-<fig/STM_xMega-eps-converted-to.pdf, id=514, 614.295pt x 231.86626pt>
+ <fig/STM_xMega-eps-converted-to.pdf, id=521, 614.295pt x 231.86626pt>
 File: fig/STM_xMega-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/STM_xMega-eps-converted-to.pdf>
 Package pdftex.def Info: fig/STM_xMega-eps-converted-to.pdf used on input line 
-1122.
+1133.
 (pdftex.def)             Requested size: 360.0pt x 135.88356pt.
 
 
-LaTeX Warning: Citation `whycon_icar' on page 32 undefined on input line 1129.
+LaTeX Warning: Citation `whycon_icar' on page 32 undefined on input line 1140.
 
 
-LaTeX Warning: Citation `whycon_jint' on page 32 undefined on input line 1129.
+LaTeX Warning: Citation `whycon_jint' on page 32 undefined on input line 1140.
 
-[32 <./fig/STM_xMega-eps-converted-to.pdf>] [33]
-<fig/experiment_photo.jpg, id=528, 5513.59875pt x 3675.7325pt>
+
+Package caption Warning: \label without proper reference on input line 1035.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:blob' on page 32 undefined on input line 1140.
+
+[32 <./fig/board1.jpg> <./fig/board2.jpg>] [33 <./fig/STM_xMega-eps-converted-t
+o.pdf>] <fig/experiment_photo.jpg, id=535, 5513.59875pt x 3675.7325pt>
 File: fig/experiment_photo.jpg Graphic file (type jpg)
 
 <use fig/experiment_photo.jpg>
-Package pdftex.def Info: fig/experiment_photo.jpg used on input line 1155.
+Package pdftex.def Info: fig/experiment_photo.jpg used on input line 1166.
 (pdftex.def)             Requested size: 360.0pt x 239.99666pt.
- [34 <./fig/experiment_photo.jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34]
 Package epstopdf Info: Source file: <fig/balancing.eps>
 (epstopdf)                    date: 2016-05-13 18:06:11
 (epstopdf)                    size: 225135 bytes
@@ -1354,17 +1394,20 @@ Package epstopdf Info: Source file: <fig/balancing.eps>
 (epstopdf)                    size: 47307 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/balancing-eps-converted
 -to.pdf fig/balancing.eps>
-(epstopdf)             \includegraphics on input line 1169.
+(epstopdf)             \includegraphics on input line 1180.
 Package epstopdf Info: Output file is already uptodate.
-
-<fig/balancing-eps-converted-to.pdf, id=533, 633.36626pt x 507.8975pt>
+ <fig/balancing-eps-converted-to.pdf, id=540, 633.36626pt x 507.8975pt>
 File: fig/balancing-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/balancing-eps-converted-to.pdf>
 Package pdftex.def Info: fig/balancing-eps-converted-to.pdf used on input line 
-1169.
+1180.
 (pdftex.def)             Requested size: 360.0pt x 288.69084pt.
- [35 <./fig/balancing-eps-converted-to.pdf>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35 <./fig/experiment_photo.jpg>]
 Package epstopdf Info: Source file: <fig/avoidance_experiment.eps>
 (epstopdf)                    date: 2016-05-13 23:30:55
 (epstopdf)                    size: 269114 bytes
@@ -1374,31 +1417,36 @@ pdf>
 (epstopdf)                    size: 23697 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/avoidance_experiment-ep
 s-converted-to.pdf fig/avoidance_experiment.eps>
-(epstopdf)             \includegraphics on input line 1181.
+(epstopdf)             \includegraphics on input line 1192.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/avoidance_experiment-eps-converted-to.pdf, id=544, 506.89375pt x 241.90375
+<fig/avoidance_experiment-eps-converted-to.pdf, id=547, 506.89375pt x 241.90375
 pt>
 File: fig/avoidance_experiment-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/avoidance_experiment-eps-converted-to.pdf>
 Package pdftex.def Info: fig/avoidance_experiment-eps-converted-to.pdf used on 
-input line 1181.
+input line 1192.
 (pdftex.def)             Requested size: 360.0pt x 171.80453pt.
 
-Overfull \hbox (1.41129pt too wide) in paragraph at lines 1192--1193
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.41129pt too wide) in paragraph at lines 1203--1204
 \OT1/cmr/m/n/10.95 Although sim-u-la-tions and ex-per-i-ments have been suc-ces
 s-fully ex-e-cuted, there
  []
 
-[36 <./fig/avoidance_experiment-eps-converted-to.pdf>] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1202.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1202.
+[36 <./fig/balancing-eps-converted-to.pdf>] [37 <./fig/avoidance_experiment-eps
+-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1209.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1209.
  (mpc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1202.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1202.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1209.
 
 Package rerunfilecheck Info: File `mpc.out' has not changed.
-(rerunfilecheck)             Checksum: 45D528DC65D47FA37EE1EAE99B6CF237;3065.
+(rerunfilecheck)             Checksum: 7B6753B9C239C17919D5D65264A3EF5E;3055.
 
 
 LaTeX Warning: There were undefined references.
@@ -1406,16 +1454,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1202.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1209.
  ) 
 Here is how much of TeX's memory you used:
- 18165 strings out of 493634
- 347856 string characters out of 3141320
- 457415 words of memory out of 3000000
- 21045 multiletter control sequences out of 15000+200000
+ 18179 strings out of 493634
+ 348162 string characters out of 3141320
+ 455521 words of memory out of 3000000
+ 21057 multiletter control sequences out of 15000+200000
  10566 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,26n,69p,1205b,851s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,26n,69p,1190b,851s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
@@ -1428,9 +1476,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on mpc.pdf (37 pages, 9512960 bytes).
+Output written on mpc.pdf (37 pages, 19532583 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 156 named destinations out of 1000 (max. 500000)
- 466 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 481 words of extra memory for PDF output out of 10000 (max. 10000000)
 

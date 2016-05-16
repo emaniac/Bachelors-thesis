@@ -1,46 +1,46 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.2}{Problem statement}{section.1}% 2
-\BOOKMARK [2][-]{subsection.3}{Previous work}{section.1}% 3
-\BOOKMARK [2][-]{subsection.4}{Related work}{section.1}% 4
-\BOOKMARK [1][-]{section.5}{UAV dynamics}{}% 5
-\BOOKMARK [2][-]{subsection.7}{Coordinate systems}{section.5}% 6
-\BOOKMARK [2][-]{subsection.9}{State observer}{section.5}% 7
-\BOOKMARK [2][-]{subsection.10}{One axis model}{section.5}% 8
-\BOOKMARK [1][-]{section.13}{Model predictive control formulation}{}% 9
-\BOOKMARK [2][-]{subsection.14}{Formulation of quadratic programming}{section.13}% 10
-\BOOKMARK [2][-]{subsection.16}{red Linked/Extended model}{section.13}% 11
-\BOOKMARK [2][-]{subsection.20}{System prediction}{section.13}% 12
-\BOOKMARK [1][-]{section.26}{MPC implementation}{}% 13
-\BOOKMARK [2][-]{subsection.27}{Trajectory}{section.26}% 14
-\BOOKMARK [2][-]{subsection.29}{Objective function}{section.26}% 15
-\BOOKMARK [2][-]{subsection.38}{Solving QP unconstrained}{section.26}% 16
-\BOOKMARK [2][-]{subsection.41}{System constraints}{section.26}% 17
-\BOOKMARK [2][-]{subsection.45}{Input constraints}{section.26}% 18
-\BOOKMARK [1][-]{section.47}{Collision Avoidance}{}% 19
-\BOOKMARK [2][-]{subsection.48}{Convexity}{section.47}% 20
-\BOOKMARK [3][-]{subsubsection.50}{Convexity of u}{subsection.48}% 21
-\BOOKMARK [3][-]{subsubsection.51}{Proof of the convexity of polytope}{subsection.48}% 22
-\BOOKMARK [1][-]{section.59}{Obstacles}{}% 23
-\BOOKMARK [2][-]{subsection.63}{Creating allowed space}{section.59}% 24
-\BOOKMARK [1][-]{section.75}{Solving Linearly Constrained QP}{}% 25
-\BOOKMARK [2][-]{subsection.76}{Safe margin}{section.75}% 26
-\BOOKMARK [2][-]{subsection.77}{LCQP solvers}{section.75}% 27
-\BOOKMARK [2][-]{subsection.81}{Barrier method}{section.75}% 28
-\BOOKMARK [2][-]{subsection.88}{Gradient descent}{section.75}% 29
-\BOOKMARK [2][-]{subsection.91}{Feasibility algorithm}{section.75}% 30
-\BOOKMARK [2][-]{subsection.96}{Implementation of the gradient descend}{section.75}% 31
-\BOOKMARK [1][-]{section.97}{Move Blocking}{}% 32
-\BOOKMARK [2][-]{subsection.98}{Move blocking implementation}{section.97}% 33
-\BOOKMARK [1][-]{section.101}{Simulations and Hardware}{}% 34
-\BOOKMARK [2][-]{subsection.102}{Simulation}{section.101}% 35
-\BOOKMARK [3][-]{subsubsection.103}{The Environment module}{subsection.102}% 36
-\BOOKMARK [3][-]{subsubsection.104}{The UAV module}{subsection.102}% 37
-\BOOKMARK [2][-]{subsection.105}{UAV custom board}{section.101}% 38
-\BOOKMARK [2][-]{subsection.108}{Obstacles detection}{section.101}% 39
-\BOOKMARK [2][-]{subsection.109}{MPC hardware implementation}{section.101}% 40
-\BOOKMARK [2][-]{subsection.110}{Hardware in the loop}{section.101}% 41
-\BOOKMARK [1][-]{section.111}{Experiments}{}% 42
-\BOOKMARK [2][-]{subsection.113}{Stabilization}{section.111}% 43
-\BOOKMARK [2][-]{subsection.115}{Obstacle avoidance}{section.111}% 44
-\BOOKMARK [1][-]{section.117}{Conclusion}{}% 45
-\BOOKMARK [2][-]{subsection.118}{Future work}{section.117}% 46
+\BOOKMARK [2][-]{subsection.3}{Problem statement}{section.1}% 2
+\BOOKMARK [2][-]{subsection.4}{Previous work}{section.1}% 3
+\BOOKMARK [2][-]{subsection.5}{Related work}{section.1}% 4
+\BOOKMARK [1][-]{section.6}{UAV dynamics}{}% 5
+\BOOKMARK [2][-]{subsection.8}{Coordinate systems}{section.6}% 6
+\BOOKMARK [2][-]{subsection.10}{State observer}{section.6}% 7
+\BOOKMARK [2][-]{subsection.11}{One axis model}{section.6}% 8
+\BOOKMARK [1][-]{section.14}{Model predictive control formulation}{}% 9
+\BOOKMARK [2][-]{subsection.15}{Formulation of quadratic programming}{section.14}% 10
+\BOOKMARK [2][-]{subsection.17}{Extended model}{section.14}% 11
+\BOOKMARK [2][-]{subsection.21}{System prediction}{section.14}% 12
+\BOOKMARK [1][-]{section.27}{MPC implementation}{}% 13
+\BOOKMARK [2][-]{subsection.28}{Trajectory}{section.27}% 14
+\BOOKMARK [2][-]{subsection.30}{Objective function}{section.27}% 15
+\BOOKMARK [2][-]{subsection.39}{Solving QP unconstrained}{section.27}% 16
+\BOOKMARK [2][-]{subsection.42}{System constraints}{section.27}% 17
+\BOOKMARK [2][-]{subsection.46}{Input constraints}{section.27}% 18
+\BOOKMARK [1][-]{section.48}{Collision Avoidance}{}% 19
+\BOOKMARK [2][-]{subsection.49}{Convexity}{section.48}% 20
+\BOOKMARK [3][-]{subsubsection.51}{Convexity of u}{subsection.49}% 21
+\BOOKMARK [3][-]{subsubsection.52}{Proof of the convexity of polytope}{subsection.49}% 22
+\BOOKMARK [1][-]{section.60}{Obstacles}{}% 23
+\BOOKMARK [2][-]{subsection.64}{Creating allowed space}{section.60}% 24
+\BOOKMARK [1][-]{section.76}{Solving Linearly Constrained QP}{}% 25
+\BOOKMARK [2][-]{subsection.77}{Safe margin}{section.76}% 26
+\BOOKMARK [2][-]{subsection.78}{LCQP solvers}{section.76}% 27
+\BOOKMARK [2][-]{subsection.82}{Barrier method}{section.76}% 28
+\BOOKMARK [2][-]{subsection.89}{Gradient descent}{section.76}% 29
+\BOOKMARK [2][-]{subsection.92}{Feasibility algorithm}{section.76}% 30
+\BOOKMARK [2][-]{subsection.97}{Implementation of the gradient descend}{section.76}% 31
+\BOOKMARK [1][-]{section.98}{Move Blocking}{}% 32
+\BOOKMARK [2][-]{subsection.99}{Move blocking implementation}{section.98}% 33
+\BOOKMARK [1][-]{section.102}{Simulations and Hardware}{}% 34
+\BOOKMARK [2][-]{subsection.104}{Simulation}{section.102}% 35
+\BOOKMARK [3][-]{subsubsection.105}{The Environment module}{subsection.104}% 36
+\BOOKMARK [3][-]{subsubsection.106}{The UAV module}{subsection.104}% 37
+\BOOKMARK [2][-]{subsection.107}{UAV custom board}{section.102}% 38
+\BOOKMARK [2][-]{subsection.110}{Obstacles detection}{section.102}% 39
+\BOOKMARK [2][-]{subsection.111}{MPC hardware implementation}{section.102}% 40
+\BOOKMARK [2][-]{subsection.112}{Hardware in the loop}{section.102}% 41
+\BOOKMARK [1][-]{section.113}{Experiments}{}% 42
+\BOOKMARK [2][-]{subsection.115}{Stabilization}{section.113}% 43
+\BOOKMARK [2][-]{subsection.117}{Obstacle avoidance}{section.113}% 44
+\BOOKMARK [1][-]{section.119}{Conclusion}{}% 45
+\BOOKMARK [2][-]{subsection.120}{Future work}{section.119}% 46
