@@ -1,4 +1,3 @@
-
 \documentclass[a4paper,11pt,titlepage]{article}
 
 \usepackage{color}
@@ -78,15 +77,15 @@ dopsat:
 -- subsection Simulation obrazek simulace
 
 \section{Introduction}
-Unmanned aerial vehicles (UAV) have become very popular in the last few years. It is mainly thanks to the multicopters, especially quadcopters and their dropping prizes. UAVs are used in many areas. They allow many amateur film makers to capture aerial shots and often substitute expensive helicopters in professional movie shooting. Many companies, such as DJI, have developed quadcopters for professional and amateur film making as shown in Fig. \ref{fig:phantom}. The use of quadcopters is also in military industry\cite{military} mainly for search and rescue missions. Some quadcopters\cite{tu_delft}, carrying defibrillators, are used for medical assistance in cases of heart failures, for their much faster reaction time than ambulance vehicles. The future use of quadcopters is almost limitless, from monitoring cities, delivering packages, to collecting the air condition data. 
+Unmanned aerial vehicles (UAV) have become very popular in the last few years. It is mainly thanks to the multicopters, especially quadcopters and their dropping prizes. UAVs are used in many areas, for instance they allow many amateur film makers to capture aerial shots and often substitute expensive helicopters in professional movie shooting. Many companies, such as DJI, have developed quadcopters for professional and amateur film making as shown in Fig. \ref{fig:phantom}. The quadcopters are also used in military\cite{military} mainly for search and rescue missions. Some quadcopters\cite{tu_delft}, carrying defibrillators, are used for medical assistance in cases of heart failures, for their much faster reaction time compared with ambulance vehicles. The future use of quadcopters is almost limitless, from monitoring cities, delivering packages, to collecting air condition data. 
 
-Quadcopter's body is simple compared with classical helicopter. It has rigid body and four propellers with a fixed pitch angles. In this thesis, the term UAV will refer to a quadcopter.
+Quadcopter's body is simple compared with a classical helicopter. It has a rigid body and four propellers with fixed pitch angles. In this thesis, the term UAV will refer to a quadcopter.
 
-Many quadcopters possess a global position system (GPS). This allows a better outdoor control of the aircraft and additional functions, such as position hold. Quadcopters are usually directly controlled by people, but in many applications an ability of autonomous flight is welcomed. For example, in case of signal lost, the UAV can autonomously return to the takeoff place and even lend.
+Many quadcopters are equipped with a global position system (GPS). This allows a better outdoor control of the aircraft and additional functions, such as position hold. Quadcopters are usually directly controlled by people, but in many applications the ability of autonomous flight is useful. For example, in case of the signal loss, the UAV can autonomously return to the takeoff place and even land.
 
-A system Vicon has been developed for more precise localization, using outside cameras. The system uses wireless communication between the on the ground computer and the UAV. The UAV's controller is usually also implemented in the on the ground computer, for the UAV's limited payload. Because of these constraints, the UAV flight is limited only to laboratory conditions.
+Another system Vicon has been developed for more precise indoor localization, using on the wall cameras. The UAV communicates wirelessly to the on the ground computer. The UAV's controller is usually also implemented in the on the ground computer, because of the UAV's limited payload. These constraints limit the UAV flight only to the laboratory conditions.
 
-There has been a demand for an on board controller, operating outside the laboratory conditions, that depends only on the on board computer and sensors. This would allow a fully autonomous flight, where some high level unit plans trajectories for a single or multiple UAV's.
+There has been a demand for an on board controller, operating outside laboratory conditions, with the controller depending only on the on board computer and sensors. This would allow a fully autonomous flight, where some high level unit computes trajectories for a single or multiple UAV's.
 
 \begin{figure}[h]
 \centering
@@ -98,7 +97,7 @@ There has been a demand for an on board controller, operating outside the labora
 \subsection{Problem statement}
 The task of this thesis is to design and implement a model predictive controller capable of precise trajectory tracking and obstacle avoidance. The trajectory will be given by a higher level planning unit and the UAV will track the trajectory, unless obstacles appear. In this case, the Model Predictive Control (MPC) automatically avoids the obstacles. This is useful for swarms of UAVs and other trajectory planning algorithms, which do not have to take into consideration either the actual control of the particular UAV or avoiding unexpected obstacles. The appropriate input actions will be found as a mathematical optimization of linearly constrained quadratic function. 
 
-The UAV will be fully autonomous with the localization, obstacle detection and computing happening solely on board. This allows the UAV to operate outside a laboratory conditions. 
+The UAV will be fully autonomous with the localization, obstacle detection and computing happening solely on board. This allows the UAV to operate outside laboratory conditions. 
 
 \subsection{Previous work}
 Since 2011, the laboratory of Intelligent and Mobile Robotics (IMR) group at FEE CTU has been developing UAV controllers. At the early stages the group concentrated on simulations of swarms and formations. In the following years hardware platforms were developed. 
@@ -219,18 +218,18 @@ where $p_1 = 0.9799$ and $p_2 = 5.0719\cdot10^{-5}$. The unconstrained MPC can b
 
 An MPC is an advanced regulator. It uses prediction of future states of a system to determine system input actions. This prediction runs constantly in a loop. Because of its computational demands, it is used mainly in processes with long time constants. A motivation for its development was to control various chemical processes, where the computational time was not limiting. Using an MPC for controlling a UAV is a challenge, because it is hard to implement on embedded hardware. Controlling a real time system, such as UAV, requires regulation in tens of Hz, giving the hardware very little time to compute such a complex problem.
 
-An MPC requires the system's state space model, initial condition and, unlike other controllers, a sequence of desired future states. An advantage of an MPC is applying large variety of constraints, which can be useful for example in the of chemical processes control. On the other hand, an MPC is sensitive to the model's inaccuracy and to sensory noise. 
+An MPC requires the system's state space model, initial condition and, unlike other controllers, a sequence of desired future states. An advantage of an MPC is ability to apply large variety of constraints, which can be useful for example in the chemical processes control. On the other hand, an MPC is sensitive to the model's inaccuracy and to sensory noise. 
 
 Output of an MPC is not only the desired input action for the next time step, but also predicted input actions and predicted behavior of the system in the whole prediction horizon for the T following time steps. Unlike standard controllers like a PID, an MPC can adjust the input action based on future demands.
 
-The MPC controller for tracking desired trajectory was developed \cite{tomas}. The goal of the thesis is to extend the controller to be capable of obstacle avoidance by using linearly constrained quadratic optimization. Obstacles are not previously known and can change position.
+The MPC controller for tracking desired trajectory was developed \cite{tomas} in the past. The goal of the thesis is to design an MPC controller with capability to avoid obstacles. Obstacles are not previously known and can change position.
 
-The MPC formulates optimization problem, that then has to be solved. The problem takes usually form of Linear Programming (LP) or, in this case, Quadratic Programming (QP).
+The MPC formulates optimization problem, that has to be solved. This problem takes usually form of Linear Programming (LP) or, in the case of this thesis, linearly constrained Quadratic Programming (QP).
 
 
 
 \subsection{Extended model}		% extended?
-For complex MPC constraints, such as position constraints for obstacle avoidance, position of UAV in one axis is a function of the position in the other axis. For these kinds of constraints axes can not be treated separately and more complicated system description is needed. The state space system must be preserved, connecting both identical systems for each axis into one system extending Eq. (\ref{eq:state_space_model_simple}) into 
+For complex MPC constraints, such as position constraints for obstacle avoidance, position of the UAV in one axis is a function of the position in the other axis. For these kinds of constraints axes can not be treated separately and more complicated system description is needed. The state space system must be preserved, connecting both identical systems for each axis into one system extending Eq. (\ref{eq:state_space_model_simple}) into 
 
 \begin{equation}
 \label{eq:state_space_model_simple}
@@ -267,7 +266,7 @@ By connecting these two single axis systems, we get the following state space ma
 
 
 \subsection{System prediction}
-The MPC algorithm is based on predicting future states based on initial condition and system input. Such a general equation can be derived from the Eq. (\ref{eq:state_space_model_simple}). With a simple substitution we can get prediction of the states at the time $t = 2$:
+The MPC algorithm is based on predicting future states based on initial condition and system input. Such a general equation can be derived from the Eq. (\ref{eq:state_space_model_simple}). With a simple substitution it is possible to get the prediction of the states at the time $t = 2$:
 
 \begin{equation}
 \begin{split}
@@ -340,21 +339,21 @@ Using this new notation, Eq. \ref{eq:prediction_big} can be rewritten in a simpl
 \end{equation}
 
 \section{MPC implementation}
-As mentioned in the Sec. \ref{sec:Model_predictive_control_formulation}, MPC formulates a quadratic optimization problem. This problem can be either constrained or unconstrained, depending on if constraints are demanded. Let's first solve the problem, where the obstacles are not involved. 
+As mentioned in the Sec. \ref{sec:Model_predictive_control_formulation}, an MPC formulates a quadratic optimization problem. This problem can be either constrained or unconstrained, depending on the fact if constraints are demanded. Let's first solve the unconstrained problem, where the obstacles are not involved. 
 \subsection{Trajectory}
-For MPC to compute input actions, there must be given a desired trajectory $\textbf{\underline{x}}_d = 
-(\textbf{x}_{d,[1]}^T, \textbf{x}_{d,[2]}^T, ..., \textbf{x}_{d,[T]}^T)^T$, where the desired state at the time $t$ is $\textbf{x}_{d,[t]} = (x_{d,[t]}, \dot{x}_{d,[t]}, \ddot{x}_{d,[t]}, y_{d,[t]}, \dot{y}_{d,[t]}, \ddot{y}_{d,[t]})^T$. These desired states contain, besides aileron and elevator position, also velocity and acceleration. This gives the MPC a chance to  enforce other properties besides position. However, The UAV desired velocity is already given by the desired positions at certain time as the distance 
+For an MPC to compute input actions, there must be given a desired trajectory $\textbf{\underline{x}}_d = 
+(\textbf{x}_{d,[1]}^T, \textbf{x}_{d,[2]}^T, ..., \textbf{x}_{d,[T]}^T)^T$, where the desired state at the time $t$ is $\textbf{x}_{d,[t]} = (x_{d,[t]}, \dot{x}_{d,[t]}, \ddot{x}_{d,[t]}, y_{d,[t]}, \dot{y}_{d,[t]}, \ddot{y}_{d,[t]})^T$. These desired states contain, besides aileron and elevator position, also velocity and acceleration. This gives the MPC a chance to  enforce other properties besides position. However, the UAV desired velocity is already given by the desired positions at certain time as the distance 
 
 \begin{equation}
 d = \sqrt{(x_{d,[t]}-x_{d,[t+1]})^2+ (y_{d,[t]}- y_{d,[t+1]})^2}.
 \end{equation} 
-The same method can be applied for acceleration. Therefore, the velocity and acceleration are demanded in the sequence of desired positions, rather than the desired system states. The desired velocity and acceleration are then ignored and it can hold any value, for example 0. The $\textbf{x}_{d,[t]}$ then takes form of $\textbf{x}_{d,[t]} = (x_{d,[t]}, 0, 0, y_{d,[t]}, 0, 0)^T$. When creating the desired trajectory, one must always keep in mind, that the desired positions hold also information about velocity and acceleration.
+The same method can be applied for acceleration. Therefore, the velocity and acceleration are demanded in the sequence of desired positions, rather than the desired system states. The desired velocity and acceleration are then ignored and it can hold any value, for example 0. The $\textbf{x}_{d,[t]}$ then takes form of $\textbf{x}_{d,[t]} = (x_{d,[t]}, 0, 0, y_{d,[t]}, 0, 0)^T$. When creating the desired trajectory, it must be always taken into consideration, that the desired positions hold also information about velocity and acceleration.
 
 \subsection{Objective function}
 \label{sec:objective_function}
-As in many other areas of engineering, the problem can be split into two independent parts. Creating an objective function and then minimizing it. The objective function's (sometimes called a cost function) value describes, how good is the particular solution. The set of particular solutions is the domain of the objective function. In this case the solution takes form of a vector $\underline{\textbf{u}}$, which can be directly transformed into predicted trajectory. The lower the value of the objective function is, the better is the particular solution. The solution with the minimal objective function's value is called an optimal solution.
+As in many other areas of engineering, this problem can be split into two independent parts. The first part is to create an objective function and second is to minimize it. The objective function's (sometimes called a cost function) value describes, how good the particular solution is. The set of particular solutions is the domain of the objective function. In this case the solution takes form of a vector $\underline{\textbf{u}}$, which can be directly transformed into predicted trajectory. The lower the value of the objective function is, the better is the particular solution. The solution with the minimal objective function's value is called an optimal solution $\uvec^*$.
 
-The goal of unconstrained MPC is to track a given trajectory as well as possible. This means, that we want to minimize the distance between all the predicted and the desired positions. This error in both axes can be computed as
+The goal of unconstrained MPC is to track a given trajectory as precisely as possible. This means, that we want to minimize the distance between all the predicted and the desired positions. This deviation in both axes can be computed as
 \begin{equation}
 \begin{split}
 \label{eq:simple_err}
@@ -362,9 +361,9 @@ e_{x, t} &= x_{[t]} - x_{d, [t]}\\
 e_{y, t} &= y_{[t]} - y_{d, [t]}.
 \end{split}
 \end{equation}
-Using this kind of error has many downsides. The obvious one is, that it penalizes error in only one direction and favors the other. If we want to use the distance, we would have to take the absolute value. This function would not be differentiable \cite{stein1970singular} and solving this task would be more complicated. Differentiability is a very useful property. Being able to compute gradient of the final objective function results in fast task solving. Above that we don't get very good results if penalizing the error linearly. 
+Using this kind of deviation has many downsides. The obvious one is, that it penalizes deviation in only one direction and favors the other. If the distance is to be used, the absolute value has to be taken. This function is not differentiable \cite{stein1970singular} and solving this task is complicated. Differentiability is a useful property. Capability to compute gradient of the final objective function results in fast task solving by applying gradient descend ----???REF----. Besides that it is not possible to get good results if penalizing the deviation linearly. 
 
-From the experience, it has come beneficial in many ways to use the the the square of the error. This preserves the condition of not prioritizing one direction error. The function is also easily differentiable. The next great advantage is penalizing big distances disproportionately more and ignoring very small errors. This also describes our requirements, where the exact tracking of the trajectory is not as important as eliminating big deviations from the trajectory. If a simple sum of $e_{x, t}^2$ and $e_{y, t}^2$ was applied, the system would behave very wildly, generating very high input actions to correct the error. However, this is not in the capabilities of the real system and could result in an unstable control. Therefore input actions must be also penalized. When combined together, we get the following objective function 
+Previous experiments have show, that using of the square of the deviation, is beneficial in many ways. This preserves the condition of not prioritizing one direction deviation. The function is also easily differentiable. Another advantage is penalizing big distances disproportionately more while ignoring minute deviations. This also describes our requirements, where the exact tracking of the trajectory is not as important as eliminating big deviations from the trajectory. If a simple sum of $e_{x, t}^2$ and $e_{y, t}^2$ is applied, the system will behave wildly, generating high input actions to correct the deviation. However, this is not in the capabilities of the real system and could result in an unstable control. Therefore input actions must also be penalized. When combined together, we get the following objective function 
 
 \begin{equation}
 \label{eq:qmpc_basic_formulation}
@@ -372,13 +371,13 @@ From the experience, it has come beneficial in many ways to use the the the squa
 \mathrm{V}\left(\textbf{e}_x, \textbf{e}_y, \uvec\right) 
 = \frac{1}{2}\sum_{i=1}^{T}\left( k_q \cdot (e^2_{x, [i]}+e^2_{y, [i]}) + k_s \cdot (\textbf{u}^2_{x, [i-1]}+\textbf{u}^2_{y, [i-1]})\right),
 \end{equation}
-where $\textbf{e}_x = (e_{x, [1]}, e_{x, [2]}, ..., e_{x, [T]})^T$ and $\textbf{e}_y = (e_{y, [1]}, e_{y, [2]}, ..., e_{y, [T]})^T$. The ratio of the constants $k_q$ and $k_s$ is the only parameter of the MPC and determines how wildly the system behaves. The error at the time $t = 0$ is determined only by the initial condition and doesn't depend on on the input action $\uvec$. Because the function is to be optimized, this error can be left out. The Eq. (\ref{eq:qmpc_basic_formulation}) can be rewritten in a matrix form using penalizing matrices $\textbf{Q}$ and $\textbf{S}$
+where $\textbf{e}_x = (e_{x, [1]}, e_{x, [2]}, ..., e_{x, [T]})^T$ and $\textbf{e}_y = (e_{y, [1]}, e_{y, [2]}, ..., e_{y, [T]})^T$. The ratio of the constants $k_q$ and $k_s$ is the only parameter of the MPC and determines how wildly the system behaves. The deviation at the time $t = 0$ is determined only by the initial condition and does not depend on on the input action $\uvec$. Because the function is to be optimized, this error can be left out. The Eq. (\ref{eq:qmpc_basic_formulation}) can be rewritten in a matrix form using penalizing matrices $\textbf{Q}$ and $\textbf{S}$
 
 \begin{equation}
 \label{eq:qmpc_sum}
 \mathrm{V}\left(\textbf{\underline{e}}, \uvec\right) = \frac{1}{2}\sum_{i=1}^{T}\left(\textbf{e}^T_{[i]}\textbf{Q}\textbf{e}_{[i]} + \textbf{u}^T_{[i-1]}\textbf{P}\textbf{u}_{[i-1]}\right),
 \end{equation}
-where $\underline{\textbf{e}} = \underline{\textbf{x}} - \underline{\textbf{x}}_d$ is the error of all states at the time $t$  and matrices $\textbf{Q}$ and $\textbf{P}$ are
+where $\underline{\textbf{e}} = \underline{\textbf{x}} - \underline{\textbf{x}}_d$ is the deviation of all states at the time $t$  and matrices $\textbf{Q}$ and $\textbf{P}$ are
 
 \begin{equation}
 \label{eq:qmpc_weighting_matrices_simple}
@@ -396,9 +395,9 @@ k_p & 0\\
 \end{bmatrix}.
 \end{equation}
 
-This form of $\textbf{Q}$ allows to penalize only position errors and ignore the velocity and acceleration errors. For a fast optimization, the objective function has to be convex, as described in the section ---CONVEXITY???---. To ensure, that the function $\mathrm{V}\left(\textbf{\underline{x}}, \uvec\right)$ is strictly convex, the matrix $\textbf{Q}$ must be positive semi-definite ($\textbf{Q} \succeq 0$) and $\textbf{P}$ must be positive definite ($\textbf{P} \succ 0$). The matrix $\textbf{Q}$ has it's eigenvalues $0$ and $k_q$, therefore $k_q \geq 0$. The eigenvalues of $\textbf{P}$ are $k_p$, so $k_p > 0$. In some MPC algorithms the last error is penalized with higher weight, forcing the system to end up in the last state more. It turned out, this can be counterproductive in obstacle avoidance system for reasons that will be discussed later.
+This form of $\textbf{Q}$ allows to penalize only position deviations and ignore the velocity and acceleration deviations. For a fast optimization, the objective function has to be convex, as described in the section ---CONVEXITY???---. To ensure the function $\mathrm{V}\left(\textbf{\underline{x}}, \uvec\right)$ is strictly convex, the matrix $\textbf{Q}$ must be positive semi-definite ($\textbf{Q} \succeq 0$) and $\textbf{P}$ must be positive definite ($\textbf{P} \succ 0$). The matrix $\textbf{Q}$ has it's eigenvalues $0$ and $k_q$, therefore $k_q \geq 0$. The eigenvalues of $\textbf{P}$ are $k_p$, so $k_p > 0$. In some MPC algorithms the last deviation is penalized with higher weight, forcing the system to end up in the last state. It turned out, that this can be counterproductive in obstacle avoidance system for reasons that will be discussed later.
 
-We want to get rid of the sum in Eq. (\ref{eq:qmpc_sum}) and substitute it with matrix multiplication. Let's first introduce the matrices $\textbf{\^Q}$ and $\textbf{\^P}$ as 
+It is important to transform the Eq. (\ref{eq:qmpc_sum}) into a matrix multiplication form. Let's first introduce the matrices $\textbf{\^Q}$ and $\textbf{\^P}$ as 
 
 \begin{equation}
 \label{eq:qmpc_weighting_matrices}
@@ -439,7 +438,7 @@ If the last error was to be penalized more, the last matrix $\textbf{Q}$ on the 
 \end{split}
 \end{equation}
 
-In the Eq. (\ref{eq:qmpc_counting}), all constant elements have been put into the $const$ part. Because the goal is to minimize the objective function $\mathrm{J}(\underline{\textbf{u}})$, parts of the equation, that do not depend on the $\underline{\textbf{u}}$ can be left out. The Eq. (\ref{eq:qmpc_counting}) can be rewritten as
+In the Eq. (\ref{eq:qmpc_counting}), all constant elements have been put into the $const$ part. Because the goal is to minimize the objective function $\mathrm{J}(\underline{\textbf{u}})$, the parts of the equation that do not depend on the $\underline{\textbf{u}}$ can be left out. The Eq. (\ref{eq:qmpc_counting}) can be rewritten as
 
 \begin{equation}
 \mathrm{J}(\underline{\textbf{u}}) = \frac{1}{2}\uvec^T\underbrace{\left(\textbf{\^B}^T\textbf{\^Q}\textbf{\^B} + \textbf{\^P}\right)}_{\textbf{\^H}}\uvec + \underbrace{\left(\textbf{\^Q}\textbf{\^B}\right)^T\left(\textbf{\^A}\textbf{x}_{[0]} - \textbf{\underline{\~x}}\right)}_{\textbf{\^c}}\uvec.
@@ -457,7 +456,7 @@ The task can be formulated as
 & & \textbf{A}_c \uvec \leq \textbf{B}_c.
 \end{aligned}
 \end{equation}
-The constraints will be further discussed in section \ref{sec:system_constraints}. For unconstrained system we can ignore them.
+The constraints will be further discussed in section \ref{sec:system_constraints}. They can be ignored for unconstrained MPC.
 
 \subsection{Solving QP unconstrained}
 We want to solve the problem formulated in the Eq. \ref{eq:qmpc_main_quadratic_form} while ignoring the constraints. For this task to have a single optimal solution $\underline{\textbf{u}}^{\star}$, the objective function has to be convex. Therefore the matrix $\textbf{\^H}$ has to be positive semi definite. This is guaranteed, because the matrices  $\textbf{Q}$ and $\textbf{S}$ were chosen to be positive semi-definite ($\textbf{Q}, \textbf{S} \succeq 0$) and $\textbf{P}$ positive definite ($\textbf{P} \succ 0$). For solving this task, we need the gradient of the objective function \cite{zometa2012implementation} as
@@ -465,7 +464,7 @@ We want to solve the problem formulated in the Eq. \ref{eq:qmpc_main_quadratic_f
 \label{eq:J_grad}
 \nabla\macJ = \textbf{\^H}\uvec + \textbf{\^c}.
 \end{equation}
-The gradient $\nabla\mathrm{J}(\underline{\textbf{u}}) \in R^{2T}$ is a vector with the opposite direction to the global minimum, so the $-\nabla\mathrm{J}(\underline{\textbf{u}})$ is a vector pointing the direction towards the global minimum $\underline{\textbf{u}}^{\star}$. For solving this task, a gradient descent algorithm can be used, but also analytic solution can be found.  
+The gradient $\nabla\mathrm{J}(\underline{\textbf{u}}) \in R^{2T}$ is a vector with the opposite direction to the global minimum, so the $-\nabla\mathrm{J}(\underline{\textbf{u}})$ is a vector pointing the direction towards the global minimum $\underline{\textbf{u}}^{\star}$. To solve this task, a gradient descent algorithm can be used, but also analytic solution can be found.
 
 Because the  $\textbf{\^H}$ is positive semidefinite, the quadratic form $\frac{1}{2}\uvec^T\textbf{\^H}\uvec$ is convex. The term $\textbf{\^c} \uvec$ is a linear function and adding it to a convex function does not change the convexity of the task. Because of this, we know, that a local minimum is also a global minimum. The local minimum can be found as 
 \begin{equation}
@@ -476,17 +475,17 @@ Because the  $\textbf{\^H}$ is positive semidefinite, the quadratic form $\frac{
 \underline{\textbf{u}}^{\star} &= -\textbf{\^H}^{-1}\textbf{\^c}.
 \end{split}
 \end{equation}
-The inverse of $\textbf{\^H}$ can be computed, because $\textbf{\^H}$ is positive-definite, therefore regular. This is guaranteed by the definition of positive-definite property, that its leading principal minors are all positive \cite{chong2013introduction}. On-board computation is fast, because matrix $\textbf{\^H}^{-1}$ does not depend on the system state and is only the function of the constants $k_q$, $k_p$ and the system model. It can be generated in advance and stored as a constant in the UAV's read-only memory. Finding the $\underline{\textbf{u}}^{\star}$ is only matter of creating vector $\textbf{\^c}$ and computing $-\textbf{\^H}^{-1}\textbf{\^c}$.
+The inverse of $\textbf{\^H}$ can be computed, because $\textbf{\^H}$ is positive-definite, therefore regular. This is guaranteed by the definition of positive-definite property that its leading principal minors are all positive \cite{chong2013introduction}. On-board computation is fast, because matrix $\textbf{\^H}^{-1}$ does not depend on the system state and is only the function of the constants $k_q$, $k_p$ and the system model. It can be generated in advance and stored as a constant in the UAV's read-only memory. Finding the $\underline{\textbf{u}}^{\star}$ is only matter of creating vector $\textbf{\^c}$ and computing $-\textbf{\^H}^{-1}\textbf{\^c}$.
 
 
 \subsection{System constraints} \label{sec:system_constraints}
-One of the greatest advantages of MPC is being able to apply large variety of constraints. As mentioned in section \ref{eq:QP_formulation}, the MPC uses linearly constraint quadratic programming for finding the input action prediction. There can be many different kinds of constraints and the MPC has to obey all of them. These constraints take form of linear inequalities
+One of the greatest advantages of an MPC is ability to apply large variety of constraints. As mentioned in Sec. \ref{eq:QP_formulation}, the MPC uses linearly constraint quadratic programming for finding the input action prediction. There can be many different kinds of constraints and the MPC has to fulfill all of them. These constraints take form of linear inequalities
 
 \begin{equation}
 \label{eq:constraint_ineq_simple}
 \macoi \cdot \uvec \leq b_i, \;\;\; i \in \{1, 2, ..., m\},
 \end{equation}
-where $\vec{\omega}_i$ is a vector of the length 2T and $b_i$ is a scalar, both describing the constraint number $i$. $m$ is the total number of constraints applied. Each constraint takes form of a half space in in a space $\textbf{R}^{2T}$ constraining it by hyperplane with a normal vector $\vec{\omega}_i$ shifted by $b_i$. To apply multiple constraints at the same time, the Eq. (\ref{eq:constraint_ineq_simple}) can be rewritten in matrix form as 
+where $\vec{\omega}_i$ is a vector of the length 2T and $b_i$ is a scalar, both describing the constraint number $i$, $m$ is the total number of constraints applied. Each constraint takes form of a half space in a space $\textbf{R}^{2T}$ constraining it by hyperplane with a normal vector $\vec{\omega}_i$ shifted by $b_i$. To apply multiple constraints at the same time, the Eq. (\ref{eq:constraint_ineq_simple}) can be rewritten in matrix form as 
 
 \begin{equation}
 \label{eq:MPC_cond}
@@ -528,9 +527,9 @@ Each line of the matrix $\textbf{A}_c$ together with a particular member of $\te
 \caption{Step response of the system using two approaches of saturation.}
 \end{figure}
 
-In control engeneering, a common problem one must overcome is a system saturation. This means, that the real system is linear only on a certain range of inputs and has limited capapibilities \cite{saturation}. For example motor can spin in a certain maximum speed despite input voltage. If the system receives too high input actions from the controller, it can get damaged. This can happen for example in PD control, when the difference between real and desired output changes rapidly in time, for example because of a sensory noise.
-A standard  solution for this problem is a simple saturation of the output of the controller. This is a simple solution and for many tasks it is enough. However, because the controller doesn't take into consideration this saturation, the system can behave incorrectly.
-The advantage of MPC is, that the controller can consider these aspects of real system and find an input prediction, that will not violate the constraints and at the same time will achieve the desired output. This is achieved by the MPC constraints. The system saturation thresholds are $u_{min}$ and $u_{max}$. We can see in fig. (\ref{fig:mpc_saturated}) simply saturated input action with the computed trajectory and int fig. (\ref{fig:mpc_constrained}) the input action computed by the MPC using system constraints. 
+In control engeneering a common problem that has to be delt with is a system saturation. This means that the real system is linear only on a certain range of inputs and has limited capapibilities \cite{saturation}. For example a motor can spin in a certain maximum speed despite input voltage. If the system receives too high input actions from the controller, it can get damaged. This can happen for example in a proportional derivative (PD) control, when the difference between real and desired output changes rapidly in time, for example because of a sensory noise.
+A standard  solution for this problem is a simple saturation of the output of the controller. This is a simple solution and for many tasks it is sufficient. However, because the controller does not take into consideration this saturation, the system can behave incorrectly.
+The advantage of an MPC is that the controller can consider these aspects of real system and find an input prediction, that will not violate the constraints and at the same time will achieve the desired output. This is achieved by the MPC constraints. The system saturation thresholds are $u_{min}$ and $u_{max}$. We can see in fig. (\ref{fig:mpc_saturated}) simply saturated input action with the computed trajectory and int fig. (\ref{fig:mpc_constrained}) the input action computed by the MPC using system constraints. 
 
 \section{Collision Avoidance}
 Collision avoidance in MPC is realized through constraining the position. This means, that we allow every predicted position to be in a certain allowed space and every violation of this space is considered to be a collision. For the UAV to get outside this allowed space will be prohibited by the algorithm used in this section. In the subsection \ref{ssec:coordinate_system} has been introduced, that the UAV is approximated with a single point of mass. Using this approximation would result only for the center point of the UAV not to collide. In the real world the size matters. it is not necessary to bring the whole model back. Instead the whole body can be approximated with a ring with the same center $(x, y)$ and radius $R$, such as every part of the body $(x_b, y_b)$ follows $|x - x_b, y - y_b| \leq R$. If the distance between the position of UAV and the edge of the allowed space is less or equal $R$, it can be said, that the UAV will not collide. 
@@ -544,18 +543,18 @@ Let's start with the definition of convexity. A set $S$ is convex if
 \label{eq:convexity_definition}
 \forall\{x_1, x_2\} \in S, \forall t \in  \textless 0, 1 \textgreater \implies t \cdot x_1 + (1-t) \cdot x_2 \in S.
 \end{equation}
-In simple worlds, if every 2 points of a set are connected with a line, the whole line has to belong to the set.
+In simple worlds, if any 2 points of a convex set are connected with a line, the whole line has to belong to the set.
 
-For easily finding the global minimum of the cost function $\mathrm{J}(\underline{\textbf{u}})$, it is essential to keep the problem convex. This has many levels. First we have to ensure, that the function J is convex. This has been discussed in Sec. \ref{sec:objective_function}. Lets introduce a space $S$ of dimension $2T+1$, where the axes will be $(\uvec^T, z)$. Then introduce a subset $J_s$ of the space $S$ as $\{J_s \in S : \mathrm{J}(\underline{\textbf{u}}) \leq z\}$. The function $\mathrm{J}(\underline{\textbf{u}})$ is convex, if and only if the subset $J_s$ is convex. 
+For easily finding the global minimum of the cost function $\mathrm{J}(\underline{\textbf{u}})$, it is essential to keep the problem convex. This has many levels. First we have to ensure, that the function J is convex. This has been discussed in Sec. \ref{sec:objective_function}. Lets introduce a space $S$ of a dimension $2T+1$, where the axes will be $(\uvec^T, z)$. Then introduce a subset $J_s$ of the space $S$ as $\{J_s \in S : \mathrm{J}(\underline{\textbf{u}}) \leq z\}$. The function $\mathrm{J}(\underline{\textbf{u}})$ is convex, if and only if the subset $J_s$ is convex. 
 \subsubsection{Convexity of u}
 Lets have a look at the vector $\underline{\textbf{u}}$. For MPC purposes this vector is is needed to be constrained. Because the space $S$ has one more dimension than $\underline{\textbf{u}}$, an extended version will be needed such as $(\underline{\textbf{u}}^T, z)^T$.
-All points, that satisfy the condition \ref{eq:MPC_cond} will create a subset $U_s$ such as $\{U_s \in S : \textbf{A}_c \cdot \underline{\textbf{u}} \leq \textbf{B}_c\}$. The condition is independent of $z$, so it is defined for all $z$. 
+All points, that satisfy the condition \ref{eq:MPC_cond} create a subset $U_s$ such as $\{U_s \in S : \textbf{A}_c \cdot \underline{\textbf{u}} \leq \textbf{B}_c\}$. The condition is independent of $z$, so it is defined for all $z$. 
 
-We can look at this as the feasible $\underline{\textbf{u}}$ is the domain of the function $\mathrm{J}(\underline{\textbf{u}})$. Let's examine, how the $U_s$ actually looks. As mentioned in the Sec. \ref{sec:system_constraints}, the feasible $\underline{\textbf{u}}$ is an $\underline{\textbf{u}}$, that satisfies $m$ linear inequalities represented as half spaces. To satisfy all of them, set $U_s$ has to be an extended intersection of half spaces. This is important, because the convexity of set $U_s$ can be now proven. 
+We can look at this as the feasible $\underline{\textbf{u}}$ is the domain of the function $\mathrm{J}(\underline{\textbf{u}})$. Let's examine, how the $U_s$ actually looks. As mentioned in the Sec. \ref{sec:system_constraints}, the feasible $\underline{\textbf{u}}$ is an $\underline{\textbf{u}}$, that satisfies $M$ linear inequalities represented as half spaces. To satisfy all of them, set $U_s$ has to be an intersection of half spaces. The convexity of set $U_s$ can be now proven. 
 
 \subsubsection{Proof of the convexity of polytope}
 
-A theorem states, that an intersection of convex sets creates a convex set. An intersection of finite number of half spaces is a convex polytope. This polytope doesn't have to be bounded. Such a polytope is shown on a figure \ref{fig:convex_polytope} in only 2 dimensions constrained by 3 half spaces.
+A theorem states, that an intersection of convex sets creates a convex set. An intersection of finite number of half spaces is a convex polytope. This polytope does not have to be bounded. Such a polytope is shown in a Fig. \ref{fig:convex_polytope} in only 2 dimensions constrained by 3 half spaces.
 
 \begin{figure}[h]
 \centering
@@ -564,14 +563,14 @@ A theorem states, that an intersection of convex sets creates a convex set. An i
 \label{fig:convex_polytope}
 \end{figure}
 
-At this time is left to prove, that a single half space is a convex set. Half space is described in Eq. (\ref{eq:constraint_ineq_simple}) as $\{\uvec : \omega_i \cdot \uvec \leq b_i$ for $i \in \{1, 2, ..., m\}\}$. If we take any 2 points $\uvec_1, \uvec_2$ belonging to the half space given by the normal vector $\omega_i$ and bias $b_i$, the line segment between them has to lie in the half space. This can be proved for any dimension. The line segment is described as
+At this time all is left to prove is that a single half space is a convex set. Half space is described in Eq. (\ref{eq:constraint_ineq_simple}) as $\{\uvec : \omega_i \cdot \uvec \leq b_i$ for $i \in \{1, 2, ..., m\}\}$. If we take any 2 points $\uvec_1, \uvec_2$ belonging to the half space given by a normal vector $\omega_i$ and a bias $b_i$, the line segment between them has to lie in the half space. This can be proved for any dimension. The line segment is described as
 
 \begin{equation}
 \label{eq:convex_line}
 t \cdot \uvec_1 + (1-t) \cdot \uvec_2; \;\;\; t \in \textless 0, 1 \textgreater
 \end{equation}
 
-The problem of proving convexity has been transformed using the Eq. (\ref{eq:convex_line}) into equation 
+The problem of proving convexity has been transformed using the Eq. (\ref{eq:convex_line}) into the equation 
 
 \begin{equation}
 \label{eq:convex_u_proof}
@@ -619,7 +618,7 @@ The third line has been divided by $t$. In case $t = 0$, the proof ends by $0 \l
 \end{equation}
 
 Similarly to the Eq. (\ref{eq:conv_proof_1_less_2}), the third line of the Eq. (\ref{eq:conv_proof_2_less_1}) has been divided by $t-1$. 
-It has been proven, that all $\uvec$, that obey the Eq. (\ref{eq:MPC_cond} c)reate a convex set. This means, that also the set $U_s$ is convex. Intersection of the convex set $J_s$ and $U_s$ is a convex set making the function $\mathrm{J}(\underline{\textbf{u}})$ with the domain as polytope defined $\textbf{A}_c \uvec \leq \textbf{B}_c$ is a convex function.
+It has been now proven, that all $\uvec$, that obey the Eq. (\ref{eq:MPC_cond} create a convex set. This means, that also the set $U_s$ is convex. Intersection of the convex set $J_s$ and $U_s$ is a convex set making the function $\mathrm{J}(\underline{\textbf{u}})$ with the domain as polytope defined $\textbf{A}_c \uvec \leq \textbf{B}_c$ is a convex function.
 
 \section{Obstacles}
 Through this thesis, obstacles are represented by circles in 2D only. They have 3 parameters: position $x_{obs}$, position $y_{obs}$ and diameter $r_{obs}$. Despite obstacles can have various shapes, we simplify them to allow simpler computations. Because the MPC runs constantly in the loop and reacts to the changing environment, it also works with moving objects. Until now, the UAV body has been approximated with one mass point without considering its real size. Since it would be difficult to calculate, whether the UAV's body has collided, we use Minkovski sum. Instead of computing with the real size of the UAV, the representation of all obstacles will change according to the UAV's size, creating a circle with the UAV's dimensions. This circle will have the smallest possible diameter $R_{UAV}$ while still wrapping the UAV as shown in the Fig. \ref{fig:UAV_dimensions}. 
